@@ -24,6 +24,8 @@ public class BaseTest {
     protected NewRepositoryPage newRepositoryPage;
     protected RepositoryPage repositoryPage;
     protected RepositorySettingsPage repositorySettingsPage;
+    protected EditFilePage editFilePage;
+
 
     @BeforeSuite (alwaysRun = true)
     public void SetupMethod(){
@@ -41,6 +43,8 @@ public class BaseTest {
         newRepositoryPage = new NewRepositoryPage(driver);
         repositoryPage =  new RepositoryPage(driver);
         repositorySettingsPage = new RepositorySettingsPage(driver);
+        editFilePage = new EditFilePage(driver);
+
     }
 
     @AfterSuite(alwaysRun = true)
