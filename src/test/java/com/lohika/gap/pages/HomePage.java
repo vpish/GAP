@@ -22,8 +22,18 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//li[not(@style)]/a/span/span[@class='repo']")
     private WebElement repositoryLink;
 
-    @FindBy(xpath = "  //div[@class='container']")
+    @FindBy(xpath = "//div[@class='container']")
     private WebElement messageContainer ;
+
+    @FindBy(xpath = "//strong[@itemprop='name']/a")
+    private WebElement repoNameLink ;
+
+    @FindBy (xpath = "//a[@aria-label='View profile and more']") private WebElement profileDropdown;
+    @FindBy (linkText = "Settings") private WebElement settingsItem;
+    @FindBy (linkText = "Account") private WebElement accountLink;
+    @FindBy (linkText = "Emails") private WebElement emailsLink;
+    @FindBy(css = "button.dropdown-item.dropdown-signout") private WebElement signoutItem;
+
 
     public HomePage(WebDriver driver) {
        super(driver);
@@ -37,13 +47,19 @@ public class HomePage extends BasePage{
     }
 
     public void selectRepository(String name){
-        Wait.forElement(homeButton);
-        homeButton.click();
-        Wait.forElement(searchFilter);
-        searchFilter.sendKeys(name);
-        Wait.seconds(2);
-        Wait.forElement(repositoryLink);
-        repositoryLink.click();
+        if (Wait.isReady(repoNameLink) && (repoNameLink.getText()==name)){
+            repoNameLink.click();
+            Wait.seconds(1);
+        }
+        else {
+            Wait.forElement(homeButton);
+            homeButton.click();
+            Wait.forElement(searchFilter);
+            searchFilter.sendKeys(name);
+            Wait.seconds(1);
+            Wait.forElement(repositoryLink);
+            repositoryLink.click();
+        }
     }
 
     public String getMessageText(){
@@ -51,4 +67,35 @@ public class HomePage extends BasePage{
         return messageContainer.getText();
     }
 
+    public void openProfilePage(){
+        Wait.forElement(profileDropdown);
+        profileDropdown.click();
+        Wait.forElement(settingsItem);
+        settingsItem.click();
+    }
+
+    public void openAccountPage(){
+        Wait.forElement(profileDropdown);
+        profileDropdown.click();
+        Wait.forElement(settingsItem);
+        settingsItem.click();
+        Wait.forElement(accountLink);
+        accountLink.click();
+    }
+
+    public void openEmailsPage(){
+        Wait.forElement(profileDropdown);
+        profileDropdown.click();
+        Wait.forElement(settingsItem);
+        settingsItem.click();
+        Wait.forElement(emailsLink);
+        emailsLink.click();
+    }
+
+    public void signout(){
+        Wait.forElement(profileDropdown);
+        profileDropdown.click();
+        Wait.forElement(signoutItem);
+        signoutItem.click();
+    }
 }

@@ -6,8 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * Created by vova on 10.01.2017.
  */
@@ -33,7 +31,8 @@ public class BaseTest {
         //driver = new FirefoxDriver();
         System.setProperty("webdriver.chrome.driver", "D:\\Dev\\GAP\\chromedriver.exe");
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver.get(SITE_URL);
         loginPage = new LoginPage(driver);
