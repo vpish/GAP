@@ -141,7 +141,7 @@ public class RepositoryPage extends BasePage {
     public void editDescription(String description, String webpage){
         Wait.forElement(editDescriptionButton);
         editDescriptionButton.click();
-        for(int i=0; i<5; i++){
+        /*for(int i=0; i<5; i++){
             Wait.seconds(1);
             if (Wait.isReady(editDescriptionButton)){
                 editDescriptionButton.click();
@@ -150,7 +150,7 @@ public class RepositoryPage extends BasePage {
             else if (Wait.isReady(editRepoDescriptionField)){
                 break;
             }
-        }
+        } */
         Wait.forElement(editRepoDescriptionField);
         editRepoDescriptionField.clear();
         editRepoDescriptionField.sendKeys(description);

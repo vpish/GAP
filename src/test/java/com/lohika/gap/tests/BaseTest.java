@@ -23,6 +23,9 @@ public class BaseTest {
     protected RepositoryPage repositoryPage;
     protected RepositorySettingsPage repositorySettingsPage;
     protected EditFilePage editFilePage;
+    protected ProfilePage profilePage;
+    protected AccountPage accountPage;
+    protected EmailSettingsPage emailSettingsPage;
 
 
     @BeforeSuite (alwaysRun = true)
@@ -43,7 +46,9 @@ public class BaseTest {
         repositoryPage =  new RepositoryPage(driver);
         repositorySettingsPage = new RepositorySettingsPage(driver);
         editFilePage = new EditFilePage(driver);
-
+        profilePage = new ProfilePage(driver);
+        accountPage = new AccountPage(driver);
+        emailSettingsPage = new EmailSettingsPage(driver);
     }
 
     @AfterSuite(alwaysRun = true)
