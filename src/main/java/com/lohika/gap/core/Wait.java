@@ -19,7 +19,7 @@ public class Wait {
        } catch (InterruptedException e) {
            e.printStackTrace();
        }
-       System.out.println("Wait " + time + " seconds");
+      // System.out.println("Wait " + time + " seconds");
    }
 
     public static void miliseconds(int time, WebElement element) {

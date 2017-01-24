@@ -9,7 +9,7 @@ public class AccountPage extends BasePage {
     @FindBy(id = "user_old_password") private WebElement oldPasswordField;
     @FindBy(id = "user_new_password") private WebElement newPasswordField;
     @FindBy(id = "user_confirm_new_password") private WebElement confirmNewPasswordField;
-    @FindBy(xpath = "//button[@type='submit' and contains(text(),'Update password')]") private WebElement updatePasswordButton;
+    @FindBy(css = "button.btn.mr-2") private WebElement updatePasswordButton;
 
     public AccountPage(WebDriver driver) {
         super(driver);

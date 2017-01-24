@@ -12,16 +12,16 @@ public class RepositoryFilesTest extends BaseTest {
     public void testAddNewFile(){
         homePage.selectRepository("TestRepo");
         repositoryPage.createNewFile();
-        editFilePage.createFile("New_file.txt","First line.","Added new file");
+        editFilePage.editFile("New_file.txt","First line.","Added new file");
         Wait.seconds(2);
         Assert.assertEquals(repositoryPage.getCommitText(),"Added new file","New file was not created");
     }
 
     @Test
-    public void testAddNewFileWithExistingName(){
+    public void testAddNewFile_AlreadyExists(){
         homePage.selectRepository("TestRepo");
         repositoryPage.createNewFile();
-        editFilePage.createFile("abcd","","");
+        editFilePage.editFile("abcd","","");
         Wait.seconds(2);
         Assert.assertEquals(homePage.getMessageText(),"A file with the same name already exists. Please choose a different name and try again.");
     }
@@ -31,21 +31,9 @@ public class RepositoryFilesTest extends BaseTest {
         homePage.selectRepository("TestRepo");
         repositoryPage.openFile("Edit_file");
         repositoryPage.goToEditMode();
-        editFilePage.editFile("add new text ","Update Edit_file");
+        editFilePage.editFile("Edit_file","add new text ","Update Edit_file");
         Wait.seconds(2);
         Assert.assertEquals(repositoryPage.getStatusText(),"Update Edit_file","File wasn't edited");
-    }
-
-    @Test
-    public void testRenameFile(){
-        homePage.selectRepository("TestRepo");
-        repositoryPage.openFile("old_name");
-        repositoryPage.goToEditMode();
-        editFilePage.renameFile("new_name");
-        Wait.seconds(2);
-        Assert.assertEquals(repositoryPage.getStatusText(),"Rename old_name to new_name","File wasn't renamed");
-        repositoryPage.goToEditMode();
-        editFilePage.renameFile("old_name");
     }
 
     @Test (dependsOnMethods = {"testAddNewFile"})

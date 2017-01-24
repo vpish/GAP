@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class RepositoryPage extends BasePage {
 
-    @FindBy(linkText = "Settings")  private WebElement settingsLink;
+    @FindBy(linkText = "Settings")  private WebElement repoSettingsLink;
     @FindBy(xpath = "//strong[@itemprop='name']/a") private WebElement reposytoryName;
     @FindBy(css = "button.btn.btn-sm.BtnGroup-item") private WebElement createNewFileButton;
     @FindBy(css = "div.CodeMirror-code") private WebElement editField;
@@ -35,141 +35,97 @@ public class RepositoryPage extends BasePage {
     @FindBy( css= "em.d-inline-block.text-gray.mb-1") private WebElement noDescriptionText;
     @FindBy( css= "span.col-11.text-gray-dark") private WebElement descriptionText;
 
-
     public RepositoryPage(WebDriver driver) {
         super(driver);
     }
 
-    public void openRepositorySettings(){
-        Wait.forElement(settingsLink);
-        settingsLink.click();
-    }
-
     public String getRepositoryName(){
-        Wait.forElement(reposytoryName);
-        String name = reposytoryName.getText();
-        return name;
-    }
-
-    public void createNewFile(){
-        Wait.forElement(createNewFileButton);
-        createNewFileButton.click();
+        return getTextFromElement(reposytoryName);
     }
 
     public String getCommitText(){
-        Wait.forElement(textInMessage);
-        //System.out.println(textInMessage.getText());
-        return textInMessage.getText();
+        return getTextFromElement(textInMessage);
     }
 
     public String getStatusText() {
-        Wait.forElement(statusText);
-      //  System.out.println(statusText.getText());
-        return statusText.getText();
+        return getTextFromElement(statusText);
     }
 
     public String getSearchStatus() {
-        Wait.forElement(searchStatus);
-        //System.out.println(searchStatus.getText());
-        return searchStatus.getText();
+        return getTextFromElement(searchStatus);
     }
 
     public void openFile(String fileName){
-        Wait.forElement(findFileButton);
-        findFileButton.click();
-        Wait.forElement(finderField);
-        finderField.sendKeys(fileName);
+        clickOnElement(findFileButton);
+        insertTextToElement(fileName,finderField);
         Wait.seconds(1);
-        Wait.forElement(fileNameInFilter);
-        fileNameInFilter.click();
+        clickOnElement(fileNameInFilter);
+    }
+
+    public void openRepositorySettings(){
+        clickOnElement(repoSettingsLink);
+    }
+
+    public void createNewFile(){
+        clickOnElement(createNewFileButton);
     }
 
     public void goToEditMode(){
-        Wait.forElement(editButton);
-        editButton.click();
+        clickOnElement(editButton);
     }
 
     public void removeCurrentFile(){
-        Wait.forElement(removeButton);
-        removeButton.click();
-        Wait.forElement(commitSummaryField);
-        commitSummaryField.sendKeys("Removed a file");
-        Wait.forElement(submitButton);
-        submitButton.click();
+        clickOnElement(removeButton);
+        insertTextToElement("Removed a file",commitSummaryField);
+        clickOnElement(submitButton);
     }
 
     public void findFile(String fileName){
-        Wait.forElement(findFileButton);
-        findFileButton.click();
-        Wait.forElement(finderField);
-        finderField.sendKeys(fileName);
+        clickOnElement(findFileButton);
+        insertTextToElement(fileName,finderField);
     }
+//-------------------uploadFile------------------------
 
     public void uploadFile(String fileName){
-        Wait.forElement(uploadFilesButton);
-        uploadFilesButton.click();
-        Wait.forElement(upload);
-        upload.sendKeys("D:\\Dev\\GAP\\" + fileName);
+        clickOnElement(uploadFilesButton);
+        insertTextToElement("D:\\Dev\\GAP\\" + fileName,upload);
+        Wait.seconds(1);
         Wait.forElement(uploadedFile);
-        Wait.forElement(commitSummaryField);
-        commitSummaryField.sendKeys("Upload " +fileName);
-        Wait.forElement(submitUpload);
-        submitUpload.click();
+        insertTextToElement("Upload " +fileName,commitSummaryField);
+        clickOnElement(submitUpload);
     }
 
     public void failedUploadFile(){
-        Wait.forElement(uploadFilesButton);
-        uploadFilesButton.click();
-        Wait.forElement(submitUpload);
-        submitUpload.click();
+        clickOnElement(uploadFilesButton);
+        clickOnElement(submitUpload);
     }
 
     public void uploadFileViaExplorer(String fileName) throws IOException {
-        Wait.forElement(uploadFilesButton);
-        uploadFilesButton.click();
-        Wait.forElement(upload);
-        upload.click();
-        //Runtime.getRuntime().exec(new String[] {"12.exe", "D:\\Dev\\GAP\\12.exe"});
+        clickOnElement(uploadFilesButton);
+        clickOnElement(upload);
+        Wait.seconds(1);
         Runtime.getRuntime().exec(new String[] {"loadFile.exe", ""});
+        Wait.seconds(1);
         Wait.forElement(uploadedFile);
-        Wait.forElement(commitSummaryField);
-        commitSummaryField.sendKeys("Upload " +fileName);
-        Wait.forElement(submitUpload);
-        submitUpload.click();
+        insertTextToElement("Upload " +fileName,commitSummaryField);
+        clickOnElement(submitUpload);
     }
     //---------------RepositoryDescriptionTest------------------------------------------
     public void editDescription(String description, String webpage){
-        Wait.forElement(editDescriptionButton);
-        editDescriptionButton.click();
-        /*for(int i=0; i<5; i++){
-            Wait.seconds(1);
-            if (Wait.isReady(editDescriptionButton)){
-                editDescriptionButton.click();
-                break;
-            }
-            else if (Wait.isReady(editRepoDescriptionField)){
-                break;
-            }
-        } */
-        Wait.forElement(editRepoDescriptionField);
-        editRepoDescriptionField.clear();
-        editRepoDescriptionField.sendKeys(description);
-        Wait.forElement(editRepoHomepageField);
-        editRepoHomepageField.clear();
-        editRepoHomepageField.sendKeys(webpage);
+        clickOnElement(editDescriptionButton);
+        insertTextToElement(description,editRepoDescriptionField);
+        insertTextToElement(webpage,editRepoHomepageField);
     }
 
     public void saveChanges(){
-        Wait.forElement(saveDescriptionButton);
-        saveDescriptionButton.click();
+        clickOnElement(saveDescriptionButton);
     }
 
     public void cancelChanges(){
-        Wait.forElement(saveDescriptionButton);
-        cancelDescriptionButton.click();
+        clickOnElement(cancelDescriptionButton);
     }
 
-    public boolean isAlertPresent() {
+    public boolean alertAppears() {
         saveDescriptionButton.click();
         if (Wait.isReady(saveDescriptionButton) && (Wait.isReady(cancelDescriptionButton))) {
             return true;

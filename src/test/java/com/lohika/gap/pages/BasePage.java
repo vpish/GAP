@@ -4,6 +4,7 @@ import com.lohika.gap.core.Wait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class BasePage {
     protected WebDriver driver;
@@ -22,6 +23,19 @@ public class BasePage {
     public void clickOnElement(WebElement element){
         Wait.forElement(element);
         element.click();
+    }
+
+    public String getTextFromElement(WebElement element){
+        Wait.forElement(element);
+        return element.getText();
+    }
+
+    public void selectValueFromDropdown(WebElement dropdown,String value){
+        Wait.forElement(dropdown);
+        Select select = new Select(dropdown);
+        Wait.seconds(1);
+        select.selectByValue(value);
+        Wait.seconds(1);
     }
 
 }

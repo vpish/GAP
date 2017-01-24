@@ -30,7 +30,7 @@ public class RepositoryDescriptionTest extends BaseTest {
         String description = repositoryPage.getDescriptionText();
         repositoryPage.editDescription("abcd","abcd");
         repositoryPage.saveChanges();
-        Assert.assertTrue(repositoryPage.isAlertPresent(),"Alert doesn't appear");
+        Assert.assertTrue(repositoryPage.alertAppears(),"Alert doesn't appear");
         Wait.seconds(2);
     }
 

@@ -7,27 +7,19 @@ import org.openqa.selenium.support.FindBy;
 
 public class NewRepositoryPage extends BasePage{
 
-    @FindBy(id = "repository_name")
-    private WebElement repositoryName;
-
-    @FindBy(id = "repository_description")
-    private WebElement repositoryDescription ;
-
-    @FindBy(xpath = "//button[@data-disable-with='Creating repository…']")
-    private WebElement submitButton ;
+    @FindBy(id = "repository_name") private WebElement repositoryName;
+    @FindBy(id = "repository_description") private WebElement repositoryDescription ;
+    @FindBy(xpath = "//button[@data-disable-with='Creating repository…']") private WebElement submitButton ;
 
     public NewRepositoryPage(WebDriver driver) {
        super(driver);
     }
 
     public void createNewRepository(String name, String description) {
-        Wait.forElement(repositoryName);
-        repositoryName.sendKeys(name);
-        Wait.forElement(repositoryDescription);
-        repositoryDescription.sendKeys(description);
+        insertTextToElement(name,repositoryName);
+        insertTextToElement(description,repositoryDescription);
         Wait.seconds(1);
-        Wait.forElement(submitButton);
-        submitButton.click();
+        clickOnElement(submitButton);
     }
 
 }

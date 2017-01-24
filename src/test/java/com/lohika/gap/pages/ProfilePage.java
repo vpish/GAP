@@ -1,6 +1,5 @@
 package com.lohika.gap.pages;
 
-import com.lohika.gap.core.Wait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class ProfilePage extends BasePage {
 
     @FindBy(id = "user_profile_name") private WebElement nameField;
+    @FindBy(id = "user_profile_email") private WebElement profileEmailDropdown;
     @FindBy(id = "user_profile_bio") private WebElement biofField;
     @FindBy(id = "user_profile_blog") private WebElement urlField;
     @FindBy(id = "user_profile_company") private WebElement companyField;
@@ -20,6 +20,8 @@ public class ProfilePage extends BasePage {
 
     public void udateProfile(String name,String bio, String url, String company, String location){
         insertTextToElement(name,nameField);
+        selectValueFromDropdown(profileEmailDropdown,"vpish03@hotmail.com");
+        selectValueFromDropdown(profileEmailDropdown,"");
         insertTextToElement(bio, biofField);
         insertTextToElement(url,urlField);
         insertTextToElement(company,companyField);

@@ -26,10 +26,8 @@ public class HomePage extends BasePage{
     }
 
     public void openNewRepositoryPage(){
-        Wait.forElement(plusDropdown);
-        plusDropdown.click();
-        Wait.forElement(newRepositoryItem);
-        newRepositoryItem.click();
+        clickOnElement(plusDropdown);
+        clickOnElement(newRepositoryItem);
     }
 
     public void selectRepository(String name){
@@ -38,50 +36,36 @@ public class HomePage extends BasePage{
             Wait.seconds(1);
         }
         else {
-            Wait.forElement(homeButton);
-            homeButton.click();
-            Wait.forElement(searchFilter);
-            searchFilter.sendKeys(name);
+            clickOnElement(homeButton);
+            insertTextToElement(name,searchFilter);
             Wait.seconds(1);
-            Wait.forElement(repositoryLink);
-            repositoryLink.click();
+            clickOnElement(repositoryLink);
         }
     }
 
     public String getMessageText(){
-        Wait.forElement(messageContainer);
-        return messageContainer.getText();
+        return getTextFromElement(messageContainer);
     }
 
     public void openProfilePage(){
-        Wait.forElement(profileDropdown);
-        profileDropdown.click();
-        Wait.forElement(settingsItem);
-        settingsItem.click();
+        clickOnElement(profileDropdown);
+        clickOnElement(settingsItem);
     }
 
     public void openAccountPage(){
-        Wait.forElement(profileDropdown);
-        profileDropdown.click();
-        Wait.forElement(settingsItem);
-        settingsItem.click();
-        Wait.forElement(accountLink);
-        accountLink.click();
+        clickOnElement(profileDropdown);
+        clickOnElement(settingsItem);
+        clickOnElement(accountLink);
     }
 
     public void openEmailsPage(){
-        Wait.forElement(profileDropdown);
-        profileDropdown.click();
-        Wait.forElement(settingsItem);
-        settingsItem.click();
-        Wait.forElement(emailsLink);
-        emailsLink.click();
+        clickOnElement(profileDropdown);
+        clickOnElement(settingsItem);
+        clickOnElement(emailsLink);
     }
 
     public void signout(){
-        Wait.forElement(profileDropdown);
-        profileDropdown.click();
-        Wait.forElement(signoutItem);
-        signoutItem.click();
+        clickOnElement(profileDropdown);
+        clickOnElement(signoutItem);
     }
 }
