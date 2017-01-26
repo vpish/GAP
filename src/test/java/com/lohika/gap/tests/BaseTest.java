@@ -1,10 +1,12 @@
 package com.lohika.gap.tests;
 
+import com.lohika.gap.core.DriverFactory;
 import com.lohika.gap.pages.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
+import static com.lohika.gap.core.DriverFactory.BrowserType.CHROME;
 
 /**
  * Created by vova on 10.01.2017.
@@ -12,6 +14,7 @@ import org.testng.annotations.BeforeSuite;
 public class BaseTest {
 
     protected WebDriver driver;
+    DriverFactory.BrowserType type = CHROME;
 
     protected final String SITE_URL = "https://github.com/login";
     protected final String USER_NAME = "vvpp03";
@@ -32,10 +35,12 @@ public class BaseTest {
     public void SetupMethod(){
         //System.setProperty("webdriver.gecko.driver","D:\\Dev\\GAP\\geckodriver.exe");
         //driver = new FirefoxDriver();
-        System.setProperty("webdriver.chrome.driver", "D:\\Dev\\GAP\\chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        //System.setProperty("webdriver.chrome.driver", "D:\\Dev\\GAP\\chromedriver.exe");
+        //driver = new ChromeDriver();
+        //driver.manage().window().maximize();
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+        driver = DriverFactory.getDriver(type);
 
         driver.get(SITE_URL);
         loginPage = new LoginPage(driver);
