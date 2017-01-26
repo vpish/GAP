@@ -33,6 +33,7 @@ public class EmailSettingsPage extends BasePage {
 
     public void changeEmailPreferences(){
         Wait.forElement(typeMarketingRadiobutton);
+        Wait.seconds(1);
         if (typeMarketingRadiobutton.isSelected()){
             clickOnElement(typeTransactionalRadiobutton);
         }

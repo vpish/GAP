@@ -33,7 +33,6 @@ public class BasePage {
     public void selectValueFromDropdown(WebElement dropdown,String value){
         Wait.forElement(dropdown);
         Select select = new Select(dropdown);
-        Wait.seconds(1);
         select.selectByValue(value);
         Wait.seconds(1);
     }

@@ -3,8 +3,8 @@ package com.lohika.gap.tests;
 import com.lohika.gap.core.DriverFactory;
 import com.lohika.gap.pages.*;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import static com.lohika.gap.core.DriverFactory.BrowserType.CHROME;
 
@@ -15,6 +15,7 @@ public class BaseTest {
 
     protected WebDriver driver;
     DriverFactory.BrowserType type = CHROME;
+    //DriverFactory.BrowserType type = FIREFOX;
 
     protected final String SITE_URL = "https://github.com/login";
     protected final String USER_NAME = "vvpp03";
@@ -31,14 +32,8 @@ public class BaseTest {
     protected EmailSettingsPage emailSettingsPage;
 
 
-    @BeforeSuite (alwaysRun = true)
+    @BeforeClass(alwaysRun = true)
     public void SetupMethod(){
-        //System.setProperty("webdriver.gecko.driver","D:\\Dev\\GAP\\geckodriver.exe");
-        //driver = new FirefoxDriver();
-        //System.setProperty("webdriver.chrome.driver", "D:\\Dev\\GAP\\chromedriver.exe");
-        //driver = new ChromeDriver();
-        //driver.manage().window().maximize();
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         driver = DriverFactory.getDriver(type);
 
@@ -56,7 +51,7 @@ public class BaseTest {
         emailSettingsPage = new EmailSettingsPage(driver);
     }
 
-    @AfterSuite(alwaysRun = true)
+    @AfterClass(alwaysRun = true)
     public void cleanMethod(){
         driver.quit();
     }

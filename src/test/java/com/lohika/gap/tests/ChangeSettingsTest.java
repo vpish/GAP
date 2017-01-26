@@ -1,6 +1,5 @@
 package com.lohika.gap.tests;
 
-import com.lohika.gap.core.Wait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,7 +9,6 @@ public class ChangeSettingsTest extends BaseTest {
     public void testChangeUserProfile(){
         homePage.openProfilePage();
         profilePage.udateProfile("Vova","It's me", "www.skype.com", "Skype","Lviv");
-        Wait.seconds(2);
         Assert.assertEquals(homePage.getMessageText(),"Profile updated successfully — view your profile.","Profile wasn't updated");
     }
 
@@ -18,7 +16,6 @@ public class ChangeSettingsTest extends BaseTest {
     public void testChangePassword_WrongOldPassword(){
         homePage.openAccountPage();
         accountPage.changePassword("qwerty","1q2w3e4r");
-        Wait.seconds(2);
         Assert.assertEquals(homePage.getMessageText(),"Old password isn't valid");
     }
 
@@ -26,7 +23,6 @@ public class ChangeSettingsTest extends BaseTest {
     public void testChangePassword_WrongNewPassword(){
         homePage.openAccountPage();
         accountPage.changePassword(USER_PASS,"1q");
-        Wait.seconds(2);
         Assert.assertEquals(homePage.getMessageText(),"Password is too short (minimum is 7 characters)");
     }
 
@@ -34,7 +30,6 @@ public class ChangeSettingsTest extends BaseTest {
     public void testAddExistingEmail(){
         homePage.openEmailsPage();
         emailSettingsPage.addNewEmail("old_mail@gmail.com");
-        Wait.seconds(2);
         Assert.assertEquals(homePage.getMessageText(),"Error adding old_mail@gmail.com: email is already in use");
     }
 
@@ -42,7 +37,6 @@ public class ChangeSettingsTest extends BaseTest {
     public void testAddNewEmail(){
         homePage.openEmailsPage();
         emailSettingsPage.addNewEmail("new_mail@gmail.com");
-        Wait.seconds(2);
         Assert.assertEquals(homePage.getMessageText(),"We sent a verification email to new_mail@gmail.com. Please follow the instructions in it.", "Email wasn't added. ");
     }
 
@@ -50,7 +44,6 @@ public class ChangeSettingsTest extends BaseTest {
     public void testRemoveEmail(){
         homePage.openEmailsPage();
         emailSettingsPage.removeAddedEmail();
-        Wait.seconds(2);
         Assert.assertEquals(homePage.getMessageText(),"Removed email new_mail@gmail.com from your account.", "Email wasn't removed. ");
     }
 
@@ -58,7 +51,6 @@ public class ChangeSettingsTest extends BaseTest {
     public void testChangeEmailPreferences(){
         homePage.openEmailsPage();
         emailSettingsPage.changeEmailPreferences();
-        Wait.seconds(2);
         Assert.assertEquals(homePage.getMessageText(),"Successfully updated your email preferences.", "Email preferences wasn't changed. ");
     }
 

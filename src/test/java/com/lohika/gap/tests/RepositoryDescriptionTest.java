@@ -1,6 +1,5 @@
 package com.lohika.gap.tests;
 
-import com.lohika.gap.core.Wait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,7 +10,7 @@ public class RepositoryDescriptionTest extends BaseTest {
         homePage.selectRepository("TestRepo");
         repositoryPage.editDescription("Test test","https://www.skype.com");
         repositoryPage.saveChanges();
-        Wait.seconds(2);
+        //Wait.seconds(1);
         Assert.assertEquals(repositoryPage.getDescriptionText(),"Test test","New Description wasn't set. ");
     }
 
@@ -20,7 +19,6 @@ public class RepositoryDescriptionTest extends BaseTest {
         homePage.selectRepository("TestRepo");
         repositoryPage.editDescription("","");
         repositoryPage.saveChanges();
-        Wait.seconds(2);
         Assert.assertEquals(repositoryPage.getDescriptionText(),"No description or website provided.","Description wasn't removed. ");
     }
 
@@ -31,7 +29,6 @@ public class RepositoryDescriptionTest extends BaseTest {
         repositoryPage.editDescription("abcd","abcd");
         repositoryPage.saveChanges();
         Assert.assertTrue(repositoryPage.alertAppears(),"Alert doesn't appear");
-        Wait.seconds(2);
     }
 
     @Test
@@ -40,14 +37,8 @@ public class RepositoryDescriptionTest extends BaseTest {
         String description = repositoryPage.getDescriptionText();
         repositoryPage.editDescription("zzzz","zzzz");
         repositoryPage.cancelChanges();
-        Wait.seconds(2);
         Assert.assertEquals(repositoryPage.getDescriptionText(),description,"Description was changed. ");
     }
-
-
-
-
-
 
 }
 
