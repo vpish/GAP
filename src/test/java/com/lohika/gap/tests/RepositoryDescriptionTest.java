@@ -19,7 +19,7 @@ public class RepositoryDescriptionTest extends BaseTest {
         homePage.selectRepository("TestRepo");
         repositoryPage.editDescription("","");
         repositoryPage.saveChanges();
-        Assert.assertEquals(repositoryPage.getDescriptionText(),"No description or website provided.","Description wasn't removed. ");
+        Assert.assertEquals(repositoryPage.getDescriptionText(),"No description, website, or topics provided.","Description wasn't removed. ");
     }
 
     @Test
@@ -39,6 +39,7 @@ public class RepositoryDescriptionTest extends BaseTest {
         repositoryPage.cancelChanges();
         Assert.assertEquals(repositoryPage.getDescriptionText(),description,"Description was changed. ");
     }
+
 
 }
 

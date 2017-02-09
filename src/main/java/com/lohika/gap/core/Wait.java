@@ -5,13 +5,10 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 
-/**
- * Created by vova on 10.01.2017.
- */
 public class Wait {
 
-    private static final int DEFAULT_TIMEOUT = 10000;
-    private static final int DEFAULT_RETRY_DELAY = 500;
+    private static final int DEFAULT_TIMEOUT = 10;
+    private static final int DEFAULT_RETRY_DELAY = 1;
 
    public static void seconds(int time) {
        try {
@@ -21,15 +18,6 @@ public class Wait {
        }
       // System.out.println("Wait " + time + " seconds");
    }
-
-    public static void miliseconds(int time, WebElement element) {
-        try {
-            Thread.sleep(time);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Wait " + time + " miliseconds for element: " + element);
-    }
 
     public static boolean isReady (WebElement element) {
         boolean res = false;
@@ -43,15 +31,16 @@ public class Wait {
 
     public static void forElement(WebElement element){
         int time = 0;
-        while (time <= DEFAULT_TIMEOUT){
+        while (time < DEFAULT_TIMEOUT){
             if (isReady(element)){
                 return;
             }
             time = time + DEFAULT_RETRY_DELAY;
-            miliseconds(time, element);
+            seconds(time);
+            System.out.println("Wait " + time + " seconds for element: " + element);
         }
         if (!isReady(element)){
-            throw new TimeoutException("Timed out after 30s. waiting for element: " + element );
+            throw new TimeoutException("Timed out after 10s. waiting for element: " + element );
         }
 
     }

@@ -32,7 +32,7 @@ public class RepositoryPage extends BasePage {
     @FindBy( id= "repo_homepage") private WebElement editRepoHomepageField;
     @FindBy( xpath= "//button[@type='submit' and contains(text(),'Save')]") private WebElement saveDescriptionButton;
     @FindBy( css= "button.btn-link.js-details-target") private WebElement cancelDescriptionButton;
-    @FindBy( css= "em.d-inline-block.text-gray") private WebElement noDescriptionText;
+    @FindBy( css= "em.d-block.text-gray") private WebElement noDescriptionText;
     @FindBy( css= "span.col-11.text-gray-dark.mr-2") private WebElement descriptionText;
 
     public RepositoryPage(WebDriver driver) {
@@ -144,6 +144,7 @@ public class RepositoryPage extends BasePage {
             Wait.forElement(descriptionText);
             return descriptionText.getText();
     }
+
 }
 
 

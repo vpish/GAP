@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Surefire_suite">
-              <span class="suite-name border-failed">Surefire suite</span>
+              <span class="suite-name border-passed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,26 +91,156 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">28 methods,   28 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
-                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Surefire_suite">
+                    <div class="method-list-content passed suite-Surefire_suite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryTest" hash-for-method="testCreateExistingRepository">testCreateExistingRepository</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.ChangeSettingsTest" hash-for-method="testAddExistingEmail">testAddExistingEmail</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryTest" hash-for-method="testCreateNamelessRepository">testCreateNamelessRepository</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.ChangeSettingsTest" hash-for-method="testAddNewEmail">testAddNewEmail</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Surefire_suite -->
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryFilesTest" hash-for-method="testAddNewFile">testAddNewFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryFilesTest" hash-for-method="testAddNewFile_AlreadyExists">testAddNewFile_AlreadyExists</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryFilesTest" hash-for-method="testCancelAddNewFile">testCancelAddNewFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryDescriptionTest" hash-for-method="testChangeDescriptionWithoutSaving">testChangeDescriptionWithoutSaving</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.ChangeSettingsTest" hash-for-method="testChangeEmailPreferences">testChangeEmailPreferences</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.ChangeSettingsTest" hash-for-method="testChangePassword_WrongNewPassword">testChangePassword_WrongNewPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.ChangeSettingsTest" hash-for-method="testChangePassword_WrongOldPassword">testChangePassword_WrongOldPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.ChangeSettingsTest" hash-for-method="testChangeUserProfile">testChangeUserProfile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.ManageRepositoriesTest" hash-for-method="testCreateExistingRepository">testCreateExistingRepository</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.ManageRepositoriesTest" hash-for-method="testCreateNamelessRepository">testCreateNamelessRepository</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.ManageRepositoriesTest" hash-for-method="testCreateNewRepository">testCreateNewRepository</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryFilesTest" hash-for-method="testEditFile">testEditFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryFilesTest" hash-for-method="testFailedUploadFile">testFailedUploadFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryDescriptionTest" hash-for-method="testRemoveCurrentDescription">testRemoveCurrentDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.ChangeSettingsTest" hash-for-method="testRemoveEmail">testRemoveEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryFilesTest" hash-for-method="testRemoveFile">testRemoveFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.ManageRepositoriesTest" hash-for-method="testRemoveRepository">testRemoveRepository</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.ManageRepositoriesTest" hash-for-method="testRenameRepository">testRenameRepository</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.ManageRepositoriesTest" hash-for-method="testRenameRepositoryToAlreadyExistingName">testRenameRepositoryToAlreadyExistingName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryDescriptionTest" hash-for-method="testSetDescriptionWithIncorectWebpage">testSetDescriptionWithIncorectWebpage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryDescriptionTest" hash-for-method="testSetNewDescription">testSetNewDescription</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.LoginTest" hash-for-method="testSignin">testSignin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.LoginTest" hash-for-method="testSigninWithIncorrectCredentials">testSigninWithIncorrectCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.LoginTest" hash-for-method="testSignout">testSignout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryFilesTest" hash-for-method="testUploadFile">testUploadFile</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Surefire_suite" title="com.lohika.gap.tests.RepositoryFilesTest" hash-for-method="testUploadFileViaAUTOIT">testUploadFileViaAUTOIT</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Surefire_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -122,10 +252,196 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-failed">
+          <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.lohika.gap.tests.RepositoryTest</span>
+              <img src="passed.png"/>
+              <span class="class-name">com.lohika.gap.tests.RepositoryFilesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddNewFile">
+                  </a> <!-- testAddNewFile -->
+                  <span class="method-name">testAddNewFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddNewFile_AlreadyExists">
+                  </a> <!-- testAddNewFile_AlreadyExists -->
+                  <span class="method-name">testAddNewFile_AlreadyExists</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCancelAddNewFile">
+                  </a> <!-- testCancelAddNewFile -->
+                  <span class="method-name">testCancelAddNewFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEditFile">
+                  </a> <!-- testEditFile -->
+                  <span class="method-name">testEditFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFailedUploadFile">
+                  </a> <!-- testFailedUploadFile -->
+                  <span class="method-name">testFailedUploadFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRemoveFile">
+                  </a> <!-- testRemoveFile -->
+                  <span class="method-name">testRemoveFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUploadFile">
+                  </a> <!-- testUploadFile -->
+                  <span class="method-name">testUploadFile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUploadFileViaAUTOIT">
+                  </a> <!-- testUploadFileViaAUTOIT -->
+                  <span class="method-name">testUploadFileViaAUTOIT</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.lohika.gap.tests.RepositoryDescriptionTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testChangeDescriptionWithoutSaving">
+                  </a> <!-- testChangeDescriptionWithoutSaving -->
+                  <span class="method-name">testChangeDescriptionWithoutSaving</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRemoveCurrentDescription">
+                  </a> <!-- testRemoveCurrentDescription -->
+                  <span class="method-name">testRemoveCurrentDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSetDescriptionWithIncorectWebpage">
+                  </a> <!-- testSetDescriptionWithIncorectWebpage -->
+                  <span class="method-name">testSetDescriptionWithIncorectWebpage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSetNewDescription">
+                  </a> <!-- testSetNewDescription -->
+                  <span class="method-name">testSetNewDescription</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.lohika.gap.tests.ChangeSettingsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddExistingEmail">
+                  </a> <!-- testAddExistingEmail -->
+                  <span class="method-name">testAddExistingEmail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAddNewEmail">
+                  </a> <!-- testAddNewEmail -->
+                  <span class="method-name">testAddNewEmail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testChangeEmailPreferences">
+                  </a> <!-- testChangeEmailPreferences -->
+                  <span class="method-name">testChangeEmailPreferences</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testChangePassword_WrongNewPassword">
+                  </a> <!-- testChangePassword_WrongNewPassword -->
+                  <span class="method-name">testChangePassword_WrongNewPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testChangePassword_WrongOldPassword">
+                  </a> <!-- testChangePassword_WrongOldPassword -->
+                  <span class="method-name">testChangePassword_WrongOldPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testChangeUserProfile">
+                  </a> <!-- testChangeUserProfile -->
+                  <span class="method-name">testChangeUserProfile</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRemoveEmail">
+                  </a> <!-- testRemoveEmail -->
+                  <span class="method-name">testRemoveEmail</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.lohika.gap.tests.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignin">
+                  </a> <!-- testSignin -->
+                  <span class="method-name">testSignin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSigninWithIncorrectCredentials">
+                  </a> <!-- testSigninWithIncorrectCredentials -->
+                  <span class="method-name">testSigninWithIncorrectCredentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSignout">
+                  </a> <!-- testSignout -->
+                  <span class="method-name">testSignout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
+          <div class="suite-Surefire_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.lohika.gap.tests.ManageRepositoriesTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -133,16 +449,6 @@
                   <a name="testCreateExistingRepository">
                   </a> <!-- testCreateExistingRepository -->
                   <span class="method-name">testCreateExistingRepository</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy5.isDisplayed(Unknown Source)
-	at com.lohika.gap.core.Wait.isReady(Wait.java:37)
-	at com.lohika.gap.core.Wait.forElement(Wait.java:47)
-	at com.lohika.gap.pages.MainPage.openNewRepositoryPage(MainPage.java:24)
-	at com.lohika.gap.tests.RepositoryTest.testCreateExistingRepository(RepositoryTest.java:27)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -150,20 +456,38 @@
                   <a name="testCreateNamelessRepository">
                   </a> <!-- testCreateNamelessRepository -->
                   <span class="method-name">testCreateNamelessRepository</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy5.isDisplayed(Unknown Source)
-	at com.lohika.gap.core.Wait.isReady(Wait.java:37)
-	at com.lohika.gap.core.Wait.forElement(Wait.java:47)
-	at com.lohika.gap.pages.MainPage.openNewRepositoryPage(MainPage.java:24)
-	at com.lohika.gap.tests.RepositoryTest.testCreateNamelessRepository(RepositoryTest.java:37)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCreateNewRepository">
+                  </a> <!-- testCreateNewRepository -->
+                  <span class="method-name">testCreateNewRepository</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRemoveRepository">
+                  </a> <!-- testRemoveRepository -->
+                  <span class="method-name">testRemoveRepository</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRenameRepository">
+                  </a> <!-- testRenameRepository -->
+                  <span class="method-name">testRenameRepository</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testRenameRepositoryToAlreadyExistingName">
+                  </a> <!-- testRenameRepositoryToAlreadyExistingName -->
+                  <span class="method-name">testRenameRepositoryToAlreadyExistingName</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-failed -->
+          </div> <!-- suite-Surefire_suite-class-passed -->
         </div> <!-- panel Surefire_suite -->
         <div panel-name="test-xml-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -176,7 +500,11 @@
   &lt;test name=&quot;Surefire test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.lohika.gap.tests.BaseTest&quot;/&gt;
-      &lt;class name=&quot;com.lohika.gap.tests.RepositoryTest&quot;/&gt;
+      &lt;class name=&quot;com.lohika.gap.tests.ChangeSettingsTest&quot;/&gt;
+      &lt;class name=&quot;com.lohika.gap.tests.LoginTest&quot;/&gt;
+      &lt;class name=&quot;com.lohika.gap.tests.ManageRepositoriesTest&quot;/&gt;
+      &lt;class name=&quot;com.lohika.gap.tests.RepositoryDescriptionTest&quot;/&gt;
+      &lt;class name=&quot;com.lohika.gap.tests.RepositoryFilesTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
 &lt;/suite&gt; &lt;!-- Surefire suite --&gt;
@@ -190,7 +518,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (2 classes)</span>
+                <span class="test-name">Surefire test (6 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -216,20 +544,124 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(28);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testCreateExistingRepository')
-data.setCell(0, 2, 'com.lohika.gap.tests.RepositoryTest')
-data.setCell(0, 3, 5);
+data.setCell(0, 1, 'testEditFile')
+data.setCell(0, 2, 'com.lohika.gap.tests.RepositoryFilesTest')
+data.setCell(0, 3, 9133);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testCreateNamelessRepository')
-data.setCell(1, 2, 'com.lohika.gap.tests.RepositoryTest')
-data.setCell(1, 3, 0);
+data.setCell(1, 1, 'testRenameRepository')
+data.setCell(1, 2, 'com.lohika.gap.tests.ManageRepositoriesTest')
+data.setCell(1, 3, 8593);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testCancelAddNewFile')
+data.setCell(2, 2, 'com.lohika.gap.tests.RepositoryFilesTest')
+data.setCell(2, 3, 8538);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testAddNewFile')
+data.setCell(3, 2, 'com.lohika.gap.tests.RepositoryFilesTest')
+data.setCell(3, 3, 7877);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testUploadFileViaAUTOIT')
+data.setCell(4, 2, 'com.lohika.gap.tests.RepositoryFilesTest')
+data.setCell(4, 3, 7737);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testRemoveFile')
+data.setCell(5, 2, 'com.lohika.gap.tests.RepositoryFilesTest')
+data.setCell(5, 3, 7713);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testRemoveRepository')
+data.setCell(6, 2, 'com.lohika.gap.tests.ManageRepositoriesTest')
+data.setCell(6, 3, 6956);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testChangeUserProfile')
+data.setCell(7, 2, 'com.lohika.gap.tests.ChangeSettingsTest')
+data.setCell(7, 3, 6871);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testUploadFile')
+data.setCell(8, 2, 'com.lohika.gap.tests.RepositoryFilesTest')
+data.setCell(8, 3, 6727);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testRemoveEmail')
+data.setCell(9, 2, 'com.lohika.gap.tests.ChangeSettingsTest')
+data.setCell(9, 3, 5430);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testChangeEmailPreferences')
+data.setCell(10, 2, 'com.lohika.gap.tests.ChangeSettingsTest')
+data.setCell(10, 3, 5046);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testCreateNewRepository')
+data.setCell(11, 2, 'com.lohika.gap.tests.ManageRepositoriesTest')
+data.setCell(11, 3, 4953);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testCreateExistingRepository')
+data.setCell(12, 2, 'com.lohika.gap.tests.ManageRepositoriesTest')
+data.setCell(12, 3, 4877);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testAddNewFile_AlreadyExists')
+data.setCell(13, 2, 'com.lohika.gap.tests.RepositoryFilesTest')
+data.setCell(13, 3, 4690);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testChangeDescriptionWithoutSaving')
+data.setCell(14, 2, 'com.lohika.gap.tests.RepositoryDescriptionTest')
+data.setCell(14, 3, 4624);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'testChangePassword_WrongOldPassword')
+data.setCell(15, 2, 'com.lohika.gap.tests.ChangeSettingsTest')
+data.setCell(15, 3, 4421);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'testAddExistingEmail')
+data.setCell(16, 2, 'com.lohika.gap.tests.ChangeSettingsTest')
+data.setCell(16, 3, 4384);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'testChangePassword_WrongNewPassword')
+data.setCell(17, 2, 'com.lohika.gap.tests.ChangeSettingsTest')
+data.setCell(17, 3, 4341);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testCreateNamelessRepository')
+data.setCell(18, 2, 'com.lohika.gap.tests.ManageRepositoriesTest')
+data.setCell(18, 3, 4316);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'testAddNewEmail')
+data.setCell(19, 2, 'com.lohika.gap.tests.ChangeSettingsTest')
+data.setCell(19, 3, 4161);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testRenameRepositoryToAlreadyExistingName')
+data.setCell(20, 2, 'com.lohika.gap.tests.ManageRepositoriesTest')
+data.setCell(20, 3, 4055);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'testFailedUploadFile')
+data.setCell(21, 2, 'com.lohika.gap.tests.RepositoryFilesTest')
+data.setCell(21, 3, 3518);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'testSetNewDescription')
+data.setCell(22, 2, 'com.lohika.gap.tests.RepositoryDescriptionTest')
+data.setCell(22, 3, 3262);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'testRemoveCurrentDescription')
+data.setCell(23, 2, 'com.lohika.gap.tests.RepositoryDescriptionTest')
+data.setCell(23, 3, 3100);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testSignin')
+data.setCell(24, 2, 'com.lohika.gap.tests.LoginTest')
+data.setCell(24, 3, 2544);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'testSignout')
+data.setCell(25, 2, 'com.lohika.gap.tests.LoginTest')
+data.setCell(25, 3, 2472);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'testSigninWithIncorrectCredentials')
+data.setCell(26, 2, 'com.lohika.gap.tests.LoginTest')
+data.setCell(26, 3, 2390);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'testSetDescriptionWithIncorectWebpage')
+data.setCell(27, 2, 'com.lohika.gap.tests.RepositoryDescriptionTest')
+data.setCell(27, 3, 2338);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 ms</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -244,18 +676,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.lohika.gap.tests.RepositoryTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">cleanMethod</span>
-                <br/>
-                <span class="ignored-method-name">SetupMethod</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Surefire_suite" class="panel">
@@ -264,33 +687,171 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.lohika.gap.tests.BaseTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
+              <div class="chronological-class-name">com.lohika.gap.tests.ChangeSettingsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
                 <span class="method-name">SetupMethod</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.lohika.gap.tests.RepositoryTest</div> <!-- chronological-class-name -->
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testCreateExistingRepository</span>
-                <span class="method-start">10409 ms</span>
+                <span class="method-name">testAddExistingEmail</span>
+                <span class="method-start">10232 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testCreateNamelessRepository</span>
-                <span class="method-start">10430 ms</span>
+                <span class="method-name">testAddNewEmail</span>
+                <span class="method-start">14617 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.lohika.gap.tests.BaseTest</div> <!-- chronological-class-name -->
-              <div class="configuration-suite after">
+              <div class="test-method">
+                <span class="method-name">testChangeEmailPreferences</span>
+                <span class="method-start">18779 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testChangePassword_WrongNewPassword</span>
+                <span class="method-start">23826 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testChangePassword_WrongOldPassword</span>
+                <span class="method-start">28167 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testChangeUserProfile</span>
+                <span class="method-start">32589 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testRemoveEmail</span>
+                <span class="method-start">39463 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
                 <span class="method-name">cleanMethod</span>
-                <span class="method-start">10484 ms</span>
-              </div> <!-- configuration-suite after -->
+                <span class="method-start">44894 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.lohika.gap.tests.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">SetupMethod</span>
+                <span class="method-start">46806 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testSignout</span>
+                <span class="method-start">54618 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSigninWithIncorrectCredentials</span>
+                <span class="method-start">57092 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSignin</span>
+                <span class="method-start">59484 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">cleanMethod</span>
+                <span class="method-start">62028 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.lohika.gap.tests.ManageRepositoriesTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">SetupMethod</span>
+                <span class="method-start">62781 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testCreateExistingRepository</span>
+                <span class="method-start">70671 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCreateNamelessRepository</span>
+                <span class="method-start">75548 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCreateNewRepository</span>
+                <span class="method-start">79864 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testRenameRepository</span>
+                <span class="method-start">84817 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testRenameRepositoryToAlreadyExistingName</span>
+                <span class="method-start">93411 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testRemoveRepository</span>
+                <span class="method-start">97466 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">cleanMethod</span>
+                <span class="method-start">104422 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.lohika.gap.tests.RepositoryDescriptionTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">SetupMethod</span>
+                <span class="method-start">105072 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testChangeDescriptionWithoutSaving</span>
+                <span class="method-start">114283 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testRemoveCurrentDescription</span>
+                <span class="method-start">118907 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSetDescriptionWithIncorectWebpage</span>
+                <span class="method-start">122007 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSetNewDescription</span>
+                <span class="method-start">124346 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">cleanMethod</span>
+                <span class="method-start">127608 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.lohika.gap.tests.RepositoryFilesTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">SetupMethod</span>
+                <span class="method-start">128261 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testAddNewFile</span>
+                <span class="method-start">136079 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testAddNewFile_AlreadyExists</span>
+                <span class="method-start">143957 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testCancelAddNewFile</span>
+                <span class="method-start">148656 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testEditFile</span>
+                <span class="method-start">157195 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testFailedUploadFile</span>
+                <span class="method-start">166329 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUploadFile</span>
+                <span class="method-start">169848 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUploadFileViaAUTOIT</span>
+                <span class="method-start">176575 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testRemoveFile</span>
+                <span class="method-start">184313 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">cleanMethod</span>
+                <span class="method-start">192026 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

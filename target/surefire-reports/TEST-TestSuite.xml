@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="12.136" tests="2" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="193.285" tests="28" errors="0" skipped="0" failures="0">
   <properties>
     <property name="idea.version" value="2016.1.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -12,7 +12,7 @@
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7539"/>
+    <property name="idea.launcher.port" value="7532"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -30,7 +30,7 @@
     <property name="os.name" value="Windows 7"/>
     <property name="classworlds.conf" value="C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2016.1.1\plugins\maven\lib\maven3\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_73\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Python27;C:\Program Files\Java\jdk1.8.0_73\bin\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Common Files\Adobe\AGL;C:\Program Files (x86)\Skype\Phone\;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_73\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Python27;C:\Program Files\Java\jdk1.8.0_73\bin\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Common Files\Adobe\AGL;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\apache-maven-3.3.9\bin;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -64,21 +64,32 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testCreateExistingRepository" classname="com.lohika.gap.tests.RepositoryTest" time="0.007">
-    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
-	at com.lohika.gap.tests.RepositoryTest.testCreateExistingRepository(RepositoryTest.java:27)
-</failure>
-    <system-err><![CDATA[Starting ChromeDriver 2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9) on port 27184
-Only local connections are allowed.
-січ. 17, 2017 6:01:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
-січ. 17, 2017 6:01:58 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: OSS
-]]></system-err>
-  </testcase>
-  <testcase name="testCreateNamelessRepository" classname="com.lohika.gap.tests.RepositoryTest" time="0">
-    <failure type="java.lang.NullPointerException">java.lang.NullPointerException
-	at com.lohika.gap.tests.RepositoryTest.testCreateNamelessRepository(RepositoryTest.java:37)
-</failure>
-  </testcase>
+  <testcase name="testAddExistingEmail" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.388"/>
+  <testcase name="testAddNewEmail" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.156"/>
+  <testcase name="testChangeEmailPreferences" classname="com.lohika.gap.tests.ChangeSettingsTest" time="5.047"/>
+  <testcase name="testChangePassword_WrongNewPassword" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.341"/>
+  <testcase name="testChangePassword_WrongOldPassword" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.423"/>
+  <testcase name="testChangeUserProfile" classname="com.lohika.gap.tests.ChangeSettingsTest" time="6.871"/>
+  <testcase name="testRemoveEmail" classname="com.lohika.gap.tests.ChangeSettingsTest" time="5.431"/>
+  <testcase name="testSignout" classname="com.lohika.gap.tests.LoginTest" time="2.471"/>
+  <testcase name="testSigninWithIncorrectCredentials" classname="com.lohika.gap.tests.LoginTest" time="2.391"/>
+  <testcase name="testSignin" classname="com.lohika.gap.tests.LoginTest" time="2.544"/>
+  <testcase name="testCreateExistingRepository" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="4.873"/>
+  <testcase name="testCreateNamelessRepository" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="4.318"/>
+  <testcase name="testCreateNewRepository" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="4.951"/>
+  <testcase name="testRenameRepository" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="8.594"/>
+  <testcase name="testRenameRepositoryToAlreadyExistingName" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="4.053"/>
+  <testcase name="testRemoveRepository" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="6.956"/>
+  <testcase name="testChangeDescriptionWithoutSaving" classname="com.lohika.gap.tests.RepositoryDescriptionTest" time="4.622"/>
+  <testcase name="testRemoveCurrentDescription" classname="com.lohika.gap.tests.RepositoryDescriptionTest" time="3.099"/>
+  <testcase name="testSetDescriptionWithIncorectWebpage" classname="com.lohika.gap.tests.RepositoryDescriptionTest" time="2.338"/>
+  <testcase name="testSetNewDescription" classname="com.lohika.gap.tests.RepositoryDescriptionTest" time="3.263"/>
+  <testcase name="testAddNewFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="7.877"/>
+  <testcase name="testAddNewFile_AlreadyExists" classname="com.lohika.gap.tests.RepositoryFilesTest" time="4.701"/>
+  <testcase name="testCancelAddNewFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="8.537"/>
+  <testcase name="testEditFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="9.134"/>
+  <testcase name="testFailedUploadFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="3.519"/>
+  <testcase name="testUploadFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="6.727"/>
+  <testcase name="testUploadFileViaAUTOIT" classname="com.lohika.gap.tests.RepositoryFilesTest" time="7.737"/>
+  <testcase name="testRemoveFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="7.715"/>
 </testsuite>

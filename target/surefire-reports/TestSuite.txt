@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 12.136 sec <<< FAILURE! - in TestSuite
-testCreateExistingRepository(com.lohika.gap.tests.RepositoryTest)  Time elapsed: 0.007 sec  <<< FAILURE!
-java.lang.NullPointerException
-	at com.lohika.gap.tests.RepositoryTest.testCreateExistingRepository(RepositoryTest.java:27)
-
-testCreateNamelessRepository(com.lohika.gap.tests.RepositoryTest)  Time elapsed: 0 sec  <<< FAILURE!
-java.lang.NullPointerException
-	at com.lohika.gap.tests.RepositoryTest.testCreateNamelessRepository(RepositoryTest.java:37)
-
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 193.285 sec - in TestSuite

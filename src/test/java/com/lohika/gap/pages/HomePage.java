@@ -20,7 +20,6 @@ public class HomePage extends BasePage{
     @FindBy (linkText = "Emails") private WebElement emailsLink;
     @FindBy(css = "button.dropdown-item.dropdown-signout") private WebElement signoutItem;
 
-
     public HomePage(WebDriver driver) {
        super(driver);
     }
@@ -68,4 +67,5 @@ public class HomePage extends BasePage{
         clickOnElement(profileDropdown);
         clickOnElement(signoutItem);
     }
+
 }
