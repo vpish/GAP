@@ -1,11 +1,13 @@
 package com.lohika.gap.pages;
 
+import com.lohika.gap.core.BasePage;
 import com.lohika.gap.core.Wait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.io.IOException;
+import java.util.List;
 
 public class RepositoryPage extends BasePage {
 
@@ -17,7 +19,7 @@ public class RepositoryPage extends BasePage {
     @FindBy(css = "a.message") private WebElement statusText;
     @FindBy(css = "a.btn.btn-sm.empty-icon.float-right.BtnGroup-item") private WebElement findFileButton;
     @FindBy(id = "tree-finder-field") private WebElement finderField;
-    @FindBy(xpath = "//a[@class and child::mark]") private WebElement fileNameInFilter;
+    //@FindBy(xpath = "//a[@class and child::mark]") private WebElement fileNameInFilter;
     @FindBy(css = "svg.octicon.octicon-pencil") private WebElement editButton;
     @FindBy(css = "button.btn-octicon.btn-octicon-danger.tooltipped.tooltipped-nw") private WebElement removeButton;
     @FindBy(id = "submit-file") private WebElement submitButton;
@@ -34,6 +36,7 @@ public class RepositoryPage extends BasePage {
     @FindBy( css= "button.btn-link.js-details-target") private WebElement cancelDescriptionButton;
     @FindBy( css= "em.d-block.text-gray") private WebElement noDescriptionText;
     @FindBy( css= "span.col-11.text-gray-dark.mr-2") private WebElement descriptionText;
+    @FindBy( css= "a.js-navigation-open") private List<WebElement> filesList;
 
     public RepositoryPage(WebDriver driver) {
         super(driver);
@@ -56,10 +59,12 @@ public class RepositoryPage extends BasePage {
     }
 
     public void openFile(String fileName){
-        clickOnElement(findFileButton);
+        Wait.forElement(findFileButton);
+        clickOnElementInList(fileName,filesList);
+        /*clickOnElement(findFileButton);
         insertTextToElement(fileName,finderField);
         Wait.seconds(1);
-        clickOnElement(fileNameInFilter);
+        clickOnElement(fileNameInFilter);*/
     }
 
     public void openRepositorySettings(){

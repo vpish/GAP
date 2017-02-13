@@ -1,5 +1,6 @@
 package com.lohika.gap.pages;
 
+import com.lohika.gap.core.BasePage;
 import com.lohika.gap.core.Wait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
