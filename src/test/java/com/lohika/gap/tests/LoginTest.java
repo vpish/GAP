@@ -14,13 +14,13 @@ public class LoginTest extends BaseTest {
     }
 
     @Test (dependsOnMethods = {"testSignout"})
-    public void testSigninWithIncorrectCredentials (){
+    public void testSignin_IncorrectCredentials(){
         loginPage.goToLoginMode();
         loginPage.login("qqq","qqqq");
         Assert.assertEquals(loginPage.getErrorText(),"Incorrect username or password.");
     }
 
-    @Test (dependsOnMethods = {"testSigninWithIncorrectCredentials"})
+    @Test (dependsOnMethods = {"testSignin_IncorrectCredentials"})
     public void testSignin(){
         loginPage.login(USER_NAME,USER_PASS);
         Wait.seconds(1);

@@ -27,7 +27,7 @@ public class ChangeSettingsTest extends BaseTest {
     }
 
     @Test
-    public void testAddExistingEmail(){
+    public void testAddNewEmail_AlreadyExist(){
         homePage.openEmailsPage();
         emailSettingsPage.addNewEmail("old_mail@gmail.com");
         Assert.assertEquals(homePage.getMessageText(),"Error adding old_mail@gmail.com: email is already in use");

@@ -1,6 +1,5 @@
 package com.lohika.gap.tests;
 
-import com.lohika.gap.core.Wait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -24,7 +23,7 @@ public class RepositoryDescriptionTest extends BaseTest {
     }
 
     @Test
-    public void testSetDescriptionWithIncorectWebpage(){
+    public void testSetNewDescription_IncorectWebpage(){
         homePage.selectRepository("TestRepo");
         String description = repositoryPage.getDescriptionText();
         repositoryPage.editDescription("abcd","abcd");
@@ -33,26 +32,13 @@ public class RepositoryDescriptionTest extends BaseTest {
     }
 
     @Test
-    public void testChangeDescriptionWithoutSaving(){
+    public void testSetNewDescription_Canceled(){
         homePage.selectRepository("TestRepo");
         String description = repositoryPage.getDescriptionText();
         repositoryPage.editDescription("zzzz","zzzz");
         repositoryPage.cancelChanges();
         Assert.assertEquals(repositoryPage.getDescriptionText(),description,"Description was changed. ");
     }
-//---------------------------
-/*
-    @Test
-    public void testTrash(){
-        homePage.selectRepository("qqq");
-        homePage.selectRepository("qqq");
-        homePage.selectRepository("TestRepo");
-        homePage.selectRepository("asdasdasd");
-        Wait.seconds(2);
-
-    }
-    */
-    //----------------------------------
 
 }
 

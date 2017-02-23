@@ -48,7 +48,7 @@ public class RepositoryFilesTest extends BaseTest {
     }
 
     @Test
-    public void testFailedUploadFile(){
+    public void testUploadFile_Failed(){
         homePage.selectRepository("TestRepo");
         repositoryPage.failedUploadFile();
         Assert.assertEquals(homePage.getMessageText(),"Add some files to include in this commit.");
@@ -62,7 +62,7 @@ public class RepositoryFilesTest extends BaseTest {
     }
 
     @Test
-    public void testCancelAddNewFile(){
+    public void testAddNewFile_Canceled(){
         homePage.selectRepository("TestRepo");
         repositoryPage.createNewFile();
         editFilePage.cancelCreateFile("some_file.txt","First line.","Added new file");

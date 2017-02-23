@@ -13,14 +13,14 @@ public class ManageRepositoriesTest extends BaseTest {
     }
 
     @Test
-    public void testCreateExistingRepository(){
+    public void testCreateNewRepository_AlreadyExist(){
         homePage.openNewRepositoryPage();
         newRepositoryPage.createNewRepository("ABC","Creating already existing repository" );
         Assert.assertEquals(homePage.getMessageText(),"Repository creation failed.","Repository doesn't exist.");
     }
 
     @Test
-    public void testCreateNamelessRepository(){
+    public void testCreateNewRepository_NoName(){
         homePage.openNewRepositoryPage();
         newRepositoryPage.createNewRepository("","Repository without name" );
         Assert.assertEquals(homePage.getMessageText(),"Repository creation failed.");
@@ -45,7 +45,7 @@ public class ManageRepositoriesTest extends BaseTest {
     }
 
     @Test
-    public void testRenameRepositoryToAlreadyExistingName(){
+    public void testRenameRepository_NameAlreadyExist(){
         homePage.selectRepository("qqq");
         repositoryPage.openRepositorySettings();
         repositorySettingsPage.renameCurrentRepository("ABC");
