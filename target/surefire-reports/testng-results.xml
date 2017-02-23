@@ -2,172 +2,172 @@
 <testng-results skipped="0" failed="0" ignored="0" total="28" passed="28">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="192713" started-at="2017-02-09T16:19:24Z" finished-at="2017-02-09T16:22:36Z">
+  <suite name="TestAll" duration-ms="190309" started-at="2017-02-23T13:49:42Z" finished-at="2017-02-23T13:52:52Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="192713" started-at="2017-02-09T16:19:24Z" finished-at="2017-02-09T16:22:36Z">
+    <test name="repositories" duration-ms="190309" started-at="2017-02-23T13:49:42Z" finished-at="2017-02-23T13:52:52Z">
       <class name="com.lohika.gap.tests.RepositoryFilesTest">
-        <test-method status="PASS" signature="SetupMethod()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@15975490]" name="SetupMethod" is-config="true" duration-ms="7818" started-at="2017-02-09T18:21:32Z" finished-at="2017-02-09T18:21:40Z">
+        <test-method status="PASS" signature="SetupMethod()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@6b143ee9]" name="SetupMethod" is-config="true" duration-ms="8020" started-at="2017-02-23T15:50:47Z" finished-at="2017-02-23T15:50:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetupMethod -->
-        <test-method status="PASS" signature="testAddNewFile()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@15975490]" name="testAddNewFile" duration-ms="7877" started-at="2017-02-09T18:21:40Z" finished-at="2017-02-09T18:21:48Z">
+        <test-method status="PASS" signature="testAddNewFile()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@6b143ee9]" name="testAddNewFile" duration-ms="6849" started-at="2017-02-23T15:50:55Z" finished-at="2017-02-23T15:51:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddNewFile -->
-        <test-method status="PASS" signature="testAddNewFile_AlreadyExists()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@15975490]" name="testAddNewFile_AlreadyExists" duration-ms="4690" started-at="2017-02-09T18:21:48Z" finished-at="2017-02-09T18:21:52Z">
+        <test-method status="PASS" signature="testAddNewFile_AlreadyExists()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@6b143ee9]" name="testAddNewFile_AlreadyExists" duration-ms="6843" started-at="2017-02-23T15:51:02Z" finished-at="2017-02-23T15:51:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddNewFile_AlreadyExists -->
-        <test-method status="PASS" signature="testCancelAddNewFile()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@15975490]" name="testCancelAddNewFile" duration-ms="8538" started-at="2017-02-09T18:21:52Z" finished-at="2017-02-09T18:22:01Z">
+        <test-method status="PASS" signature="testAddNewFile_Canceled()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@6b143ee9]" name="testAddNewFile_Canceled" duration-ms="9967" started-at="2017-02-23T15:51:09Z" finished-at="2017-02-23T15:51:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCancelAddNewFile -->
-        <test-method status="PASS" signature="testEditFile()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@15975490]" name="testEditFile" duration-ms="9133" started-at="2017-02-09T18:22:01Z" finished-at="2017-02-09T18:22:10Z">
+        </test-method> <!-- testAddNewFile_Canceled -->
+        <test-method status="PASS" signature="testEditFile()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@6b143ee9]" name="testEditFile" duration-ms="8087" started-at="2017-02-23T15:51:19Z" finished-at="2017-02-23T15:51:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEditFile -->
-        <test-method status="PASS" signature="testFailedUploadFile()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@15975490]" name="testFailedUploadFile" duration-ms="3518" started-at="2017-02-09T18:22:10Z" finished-at="2017-02-09T18:22:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testFailedUploadFile -->
-        <test-method status="PASS" signature="testUploadFile()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@15975490]" name="testUploadFile" duration-ms="6727" started-at="2017-02-09T18:22:13Z" finished-at="2017-02-09T18:22:20Z">
+        <test-method status="PASS" signature="testUploadFile()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@6b143ee9]" name="testUploadFile" duration-ms="8570" started-at="2017-02-23T15:51:27Z" finished-at="2017-02-23T15:51:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUploadFile -->
-        <test-method status="PASS" signature="testUploadFileViaAUTOIT()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@15975490]" name="testUploadFileViaAUTOIT" duration-ms="7737" started-at="2017-02-09T18:22:20Z" finished-at="2017-02-09T18:22:28Z">
+        <test-method status="PASS" signature="testUploadFileViaAUTOIT()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@6b143ee9]" name="testUploadFileViaAUTOIT" duration-ms="8058" started-at="2017-02-23T15:51:35Z" finished-at="2017-02-23T15:51:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUploadFileViaAUTOIT -->
-        <test-method status="PASS" signature="testRemoveFile()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@15975490]" name="testRemoveFile" duration-ms="7713" started-at="2017-02-09T18:22:28Z" depends-on-methods="com.lohika.gap.tests.RepositoryFilesTest.testAddNewFile" finished-at="2017-02-09T18:22:36Z">
+        <test-method status="PASS" signature="testUploadFile_Failed()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@6b143ee9]" name="testUploadFile_Failed" duration-ms="3470" started-at="2017-02-23T15:51:44Z" finished-at="2017-02-23T15:51:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUploadFile_Failed -->
+        <test-method status="PASS" signature="testRemoveFile()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@6b143ee9]" name="testRemoveFile" duration-ms="6046" started-at="2017-02-23T15:51:47Z" depends-on-methods="com.lohika.gap.tests.RepositoryFilesTest.testAddNewFile" finished-at="2017-02-23T15:51:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRemoveFile -->
-        <test-method status="PASS" signature="cleanMethod()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@15975490]" name="cleanMethod" is-config="true" duration-ms="669" started-at="2017-02-09T18:22:36Z" finished-at="2017-02-09T18:22:36Z">
+        <test-method status="PASS" signature="cleanMethod()[pri:0, instance:com.lohika.gap.tests.RepositoryFilesTest@6b143ee9]" name="cleanMethod" is-config="true" duration-ms="769" started-at="2017-02-23T15:51:53Z" finished-at="2017-02-23T15:51:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanMethod -->
       </class> <!-- com.lohika.gap.tests.RepositoryFilesTest -->
       <class name="com.lohika.gap.tests.LoginTest">
-        <test-method status="PASS" signature="SetupMethod()[pri:0, instance:com.lohika.gap.tests.LoginTest@3567135c]" name="SetupMethod" is-config="true" duration-ms="7811" started-at="2017-02-09T18:20:10Z" finished-at="2017-02-09T18:20:18Z">
+        <test-method status="PASS" signature="SetupMethod()[pri:0, instance:com.lohika.gap.tests.LoginTest@6615435c]" name="SetupMethod" is-config="true" duration-ms="7860" started-at="2017-02-23T15:52:37Z" finished-at="2017-02-23T15:52:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetupMethod -->
-        <test-method status="PASS" signature="testSignout()[pri:0, instance:com.lohika.gap.tests.LoginTest@3567135c]" name="testSignout" duration-ms="2472" started-at="2017-02-09T18:20:18Z" finished-at="2017-02-09T18:20:21Z">
+        <test-method status="PASS" signature="testSignout()[pri:0, instance:com.lohika.gap.tests.LoginTest@6615435c]" name="testSignout" duration-ms="2411" started-at="2017-02-23T15:52:44Z" finished-at="2017-02-23T15:52:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSignout -->
-        <test-method status="PASS" signature="testSigninWithIncorrectCredentials()[pri:0, instance:com.lohika.gap.tests.LoginTest@3567135c]" name="testSigninWithIncorrectCredentials" duration-ms="2390" started-at="2017-02-09T18:20:21Z" depends-on-methods="com.lohika.gap.tests.LoginTest.testSignout" finished-at="2017-02-09T18:20:23Z">
+        <test-method status="PASS" signature="testSignin_IncorrectCredentials()[pri:0, instance:com.lohika.gap.tests.LoginTest@6615435c]" name="testSignin_IncorrectCredentials" duration-ms="2393" started-at="2017-02-23T15:52:47Z" depends-on-methods="com.lohika.gap.tests.LoginTest.testSignout" finished-at="2017-02-23T15:52:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSigninWithIncorrectCredentials -->
-        <test-method status="PASS" signature="testSignin()[pri:0, instance:com.lohika.gap.tests.LoginTest@3567135c]" name="testSignin" duration-ms="2544" started-at="2017-02-09T18:20:23Z" depends-on-methods="com.lohika.gap.tests.LoginTest.testSigninWithIncorrectCredentials" finished-at="2017-02-09T18:20:26Z">
+        </test-method> <!-- testSignin_IncorrectCredentials -->
+        <test-method status="PASS" signature="testSignin()[pri:0, instance:com.lohika.gap.tests.LoginTest@6615435c]" name="testSignin" duration-ms="2533" started-at="2017-02-23T15:52:49Z" depends-on-methods="com.lohika.gap.tests.LoginTest.testSignin_IncorrectCredentials" finished-at="2017-02-23T15:52:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSignin -->
-        <test-method status="PASS" signature="cleanMethod()[pri:0, instance:com.lohika.gap.tests.LoginTest@3567135c]" name="cleanMethod" is-config="true" duration-ms="752" started-at="2017-02-09T18:20:26Z" finished-at="2017-02-09T18:20:26Z">
+        <test-method status="PASS" signature="cleanMethod()[pri:0, instance:com.lohika.gap.tests.LoginTest@6615435c]" name="cleanMethod" is-config="true" duration-ms="697" started-at="2017-02-23T15:52:52Z" finished-at="2017-02-23T15:52:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanMethod -->
       </class> <!-- com.lohika.gap.tests.LoginTest -->
       <class name="com.lohika.gap.tests.ManageRepositoriesTest">
-        <test-method status="PASS" signature="SetupMethod()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@4157f54e]" name="SetupMethod" is-config="true" duration-ms="7890" started-at="2017-02-09T18:20:26Z" finished-at="2017-02-09T18:20:34Z">
+        <test-method status="PASS" signature="SetupMethod()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@90f6bfd]" name="SetupMethod" is-config="true" duration-ms="9198" started-at="2017-02-23T15:49:42Z" finished-at="2017-02-23T15:49:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetupMethod -->
-        <test-method status="PASS" signature="testCreateExistingRepository()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@4157f54e]" name="testCreateExistingRepository" duration-ms="4877" started-at="2017-02-09T18:20:34Z" finished-at="2017-02-09T18:20:39Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCreateExistingRepository -->
-        <test-method status="PASS" signature="testCreateNamelessRepository()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@4157f54e]" name="testCreateNamelessRepository" duration-ms="4316" started-at="2017-02-09T18:20:39Z" finished-at="2017-02-09T18:20:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testCreateNamelessRepository -->
-        <test-method status="PASS" signature="testCreateNewRepository()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@4157f54e]" name="testCreateNewRepository" duration-ms="4953" started-at="2017-02-09T18:20:43Z" finished-at="2017-02-09T18:20:48Z">
+        <test-method status="PASS" signature="testCreateNewRepository()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@90f6bfd]" name="testCreateNewRepository" duration-ms="5292" started-at="2017-02-23T15:49:51Z" finished-at="2017-02-23T15:49:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateNewRepository -->
-        <test-method status="PASS" signature="testRenameRepository()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@4157f54e]" name="testRenameRepository" duration-ms="8593" started-at="2017-02-09T18:20:48Z" finished-at="2017-02-09T18:20:57Z">
+        <test-method status="PASS" signature="testCreateNewRepository_AlreadyExist()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@90f6bfd]" name="testCreateNewRepository_AlreadyExist" duration-ms="5389" started-at="2017-02-23T15:49:57Z" finished-at="2017-02-23T15:50:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateNewRepository_AlreadyExist -->
+        <test-method status="PASS" signature="testCreateNewRepository_NoName()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@90f6bfd]" name="testCreateNewRepository_NoName" duration-ms="4404" started-at="2017-02-23T15:50:02Z" finished-at="2017-02-23T15:50:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateNewRepository_NoName -->
+        <test-method status="PASS" signature="testRenameRepository()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@90f6bfd]" name="testRenameRepository" duration-ms="8217" started-at="2017-02-23T15:50:06Z" finished-at="2017-02-23T15:50:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRenameRepository -->
-        <test-method status="PASS" signature="testRenameRepositoryToAlreadyExistingName()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@4157f54e]" name="testRenameRepositoryToAlreadyExistingName" duration-ms="4055" started-at="2017-02-09T18:20:57Z" finished-at="2017-02-09T18:21:01Z">
+        <test-method status="PASS" signature="testRenameRepository_NameAlreadyExist()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@90f6bfd]" name="testRenameRepository_NameAlreadyExist" duration-ms="3923" started-at="2017-02-23T15:50:15Z" finished-at="2017-02-23T15:50:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRenameRepositoryToAlreadyExistingName -->
-        <test-method status="PASS" signature="testRemoveRepository()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@4157f54e]" name="testRemoveRepository" duration-ms="6956" started-at="2017-02-09T18:21:01Z" depends-on-methods="com.lohika.gap.tests.ManageRepositoriesTest.testCreateNewRepository" finished-at="2017-02-09T18:21:08Z">
+        </test-method> <!-- testRenameRepository_NameAlreadyExist -->
+        <test-method status="PASS" signature="testRemoveRepository()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@90f6bfd]" name="testRemoveRepository" duration-ms="5728" started-at="2017-02-23T15:50:19Z" depends-on-methods="com.lohika.gap.tests.ManageRepositoriesTest.testCreateNewRepository" finished-at="2017-02-23T15:50:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRemoveRepository -->
-        <test-method status="PASS" signature="cleanMethod()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@4157f54e]" name="cleanMethod" is-config="true" duration-ms="650" started-at="2017-02-09T18:21:08Z" finished-at="2017-02-09T18:21:09Z">
+        <test-method status="PASS" signature="cleanMethod()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@90f6bfd]" name="cleanMethod" is-config="true" duration-ms="1369" started-at="2017-02-23T15:50:24Z" finished-at="2017-02-23T15:50:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanMethod -->
       </class> <!-- com.lohika.gap.tests.ManageRepositoriesTest -->
       <class name="com.lohika.gap.tests.RepositoryDescriptionTest">
-        <test-method status="PASS" signature="SetupMethod()[pri:0, instance:com.lohika.gap.tests.RepositoryDescriptionTest@47f6473]" name="SetupMethod" is-config="true" duration-ms="9211" started-at="2017-02-09T18:21:09Z" finished-at="2017-02-09T18:21:18Z">
+        <test-method status="PASS" signature="SetupMethod()[pri:0, instance:com.lohika.gap.tests.RepositoryDescriptionTest@15975490]" name="SetupMethod" is-config="true" duration-ms="8470" started-at="2017-02-23T15:50:26Z" finished-at="2017-02-23T15:50:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetupMethod -->
-        <test-method status="PASS" signature="testChangeDescriptionWithoutSaving()[pri:0, instance:com.lohika.gap.tests.RepositoryDescriptionTest@47f6473]" name="testChangeDescriptionWithoutSaving" duration-ms="4624" started-at="2017-02-09T18:21:18Z" finished-at="2017-02-09T18:21:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testChangeDescriptionWithoutSaving -->
-        <test-method status="PASS" signature="testRemoveCurrentDescription()[pri:0, instance:com.lohika.gap.tests.RepositoryDescriptionTest@47f6473]" name="testRemoveCurrentDescription" duration-ms="3100" started-at="2017-02-09T18:21:23Z" finished-at="2017-02-09T18:21:26Z">
+        <test-method status="PASS" signature="testRemoveCurrentDescription()[pri:0, instance:com.lohika.gap.tests.RepositoryDescriptionTest@15975490]" name="testRemoveCurrentDescription" duration-ms="4434" started-at="2017-02-23T15:50:34Z" finished-at="2017-02-23T15:50:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRemoveCurrentDescription -->
-        <test-method status="PASS" signature="testSetDescriptionWithIncorectWebpage()[pri:0, instance:com.lohika.gap.tests.RepositoryDescriptionTest@47f6473]" name="testSetDescriptionWithIncorectWebpage" duration-ms="2338" started-at="2017-02-09T18:21:26Z" finished-at="2017-02-09T18:21:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSetDescriptionWithIncorectWebpage -->
-        <test-method status="PASS" signature="testSetNewDescription()[pri:0, instance:com.lohika.gap.tests.RepositoryDescriptionTest@47f6473]" name="testSetNewDescription" duration-ms="3262" started-at="2017-02-09T18:21:28Z" finished-at="2017-02-09T18:21:31Z">
+        <test-method status="PASS" signature="testSetNewDescription()[pri:0, instance:com.lohika.gap.tests.RepositoryDescriptionTest@15975490]" name="testSetNewDescription" duration-ms="3463" started-at="2017-02-23T15:50:39Z" finished-at="2017-02-23T15:50:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetNewDescription -->
-        <test-method status="PASS" signature="cleanMethod()[pri:0, instance:com.lohika.gap.tests.RepositoryDescriptionTest@47f6473]" name="cleanMethod" is-config="true" duration-ms="653" started-at="2017-02-09T18:21:31Z" finished-at="2017-02-09T18:21:32Z">
+        <test-method status="PASS" signature="testSetNewDescription_Canceled()[pri:0, instance:com.lohika.gap.tests.RepositoryDescriptionTest@15975490]" name="testSetNewDescription_Canceled" duration-ms="2149" started-at="2017-02-23T15:50:42Z" finished-at="2017-02-23T15:50:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetNewDescription_Canceled -->
+        <test-method status="PASS" signature="testSetNewDescription_IncorectWebpage()[pri:0, instance:com.lohika.gap.tests.RepositoryDescriptionTest@15975490]" name="testSetNewDescription_IncorectWebpage" duration-ms="2229" started-at="2017-02-23T15:50:44Z" finished-at="2017-02-23T15:50:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetNewDescription_IncorectWebpage -->
+        <test-method status="PASS" signature="cleanMethod()[pri:0, instance:com.lohika.gap.tests.RepositoryDescriptionTest@15975490]" name="cleanMethod" is-config="true" duration-ms="696" started-at="2017-02-23T15:50:46Z" finished-at="2017-02-23T15:50:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanMethod -->
       </class> <!-- com.lohika.gap.tests.RepositoryDescriptionTest -->
       <class name="com.lohika.gap.tests.ChangeSettingsTest">
-        <test-method status="PASS" signature="SetupMethod()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@6be46e8f]" name="SetupMethod" is-config="true" duration-ms="10223" started-at="2017-02-09T18:19:24Z" finished-at="2017-02-09T18:19:34Z">
+        <test-method status="PASS" signature="SetupMethod()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@1936f0f5]" name="SetupMethod" is-config="true" duration-ms="9090" started-at="2017-02-23T15:51:54Z" finished-at="2017-02-23T15:52:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetupMethod -->
-        <test-method status="PASS" signature="testAddExistingEmail()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@6be46e8f]" name="testAddExistingEmail" duration-ms="4384" started-at="2017-02-09T18:19:34Z" finished-at="2017-02-09T18:19:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testAddExistingEmail -->
-        <test-method status="PASS" signature="testAddNewEmail()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@6be46e8f]" name="testAddNewEmail" duration-ms="4161" started-at="2017-02-09T18:19:38Z" finished-at="2017-02-09T18:19:42Z">
+        <test-method status="PASS" signature="testAddNewEmail()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@1936f0f5]" name="testAddNewEmail" duration-ms="4397" started-at="2017-02-23T15:52:03Z" finished-at="2017-02-23T15:52:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddNewEmail -->
-        <test-method status="PASS" signature="testChangeEmailPreferences()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@6be46e8f]" name="testChangeEmailPreferences" duration-ms="5046" started-at="2017-02-09T18:19:42Z" finished-at="2017-02-09T18:19:47Z">
+        <test-method status="PASS" signature="testAddNewEmail_AlreadyExist()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@1936f0f5]" name="testAddNewEmail_AlreadyExist" duration-ms="4403" started-at="2017-02-23T15:52:07Z" finished-at="2017-02-23T15:52:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNewEmail_AlreadyExist -->
+        <test-method status="PASS" signature="testChangeEmailPreferences()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@1936f0f5]" name="testChangeEmailPreferences" duration-ms="4819" started-at="2017-02-23T15:52:12Z" finished-at="2017-02-23T15:52:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testChangeEmailPreferences -->
-        <test-method status="PASS" signature="testChangePassword_WrongNewPassword()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@6be46e8f]" name="testChangePassword_WrongNewPassword" duration-ms="4341" started-at="2017-02-09T18:19:47Z" finished-at="2017-02-09T18:19:52Z">
+        <test-method status="PASS" signature="testChangePassword_WrongNewPassword()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@1936f0f5]" name="testChangePassword_WrongNewPassword" duration-ms="4393" started-at="2017-02-23T15:52:17Z" finished-at="2017-02-23T15:52:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testChangePassword_WrongNewPassword -->
-        <test-method status="PASS" signature="testChangePassword_WrongOldPassword()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@6be46e8f]" name="testChangePassword_WrongOldPassword" duration-ms="4421" started-at="2017-02-09T18:19:52Z" finished-at="2017-02-09T18:19:56Z">
+        <test-method status="PASS" signature="testChangePassword_WrongOldPassword()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@1936f0f5]" name="testChangePassword_WrongOldPassword" duration-ms="4007" started-at="2017-02-23T15:52:21Z" finished-at="2017-02-23T15:52:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testChangePassword_WrongOldPassword -->
-        <test-method status="PASS" signature="testChangeUserProfile()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@6be46e8f]" name="testChangeUserProfile" duration-ms="6871" started-at="2017-02-09T18:19:56Z" finished-at="2017-02-09T18:20:03Z">
+        <test-method status="PASS" signature="testChangeUserProfile()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@1936f0f5]" name="testChangeUserProfile" duration-ms="6498" started-at="2017-02-23T15:52:25Z" finished-at="2017-02-23T15:52:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testChangeUserProfile -->
-        <test-method status="PASS" signature="testRemoveEmail()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@6be46e8f]" name="testRemoveEmail" duration-ms="5430" started-at="2017-02-09T18:20:03Z" depends-on-methods="com.lohika.gap.tests.ChangeSettingsTest.testAddNewEmail" finished-at="2017-02-09T18:20:09Z">
+        <test-method status="PASS" signature="testRemoveEmail()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@1936f0f5]" name="testRemoveEmail" duration-ms="4426" started-at="2017-02-23T15:52:31Z" depends-on-methods="com.lohika.gap.tests.ChangeSettingsTest.testAddNewEmail" finished-at="2017-02-23T15:52:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRemoveEmail -->
-        <test-method status="PASS" signature="cleanMethod()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@6be46e8f]" name="cleanMethod" is-config="true" duration-ms="1910" started-at="2017-02-09T18:20:09Z" finished-at="2017-02-09T18:20:10Z">
+        <test-method status="PASS" signature="cleanMethod()[pri:0, instance:com.lohika.gap.tests.ChangeSettingsTest@1936f0f5]" name="cleanMethod" is-config="true" duration-ms="675" started-at="2017-02-23T15:52:36Z" finished-at="2017-02-23T15:52:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanMethod -->
       </class> <!-- com.lohika.gap.tests.ChangeSettingsTest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+    </test> <!-- repositories -->
+  </suite> <!-- TestAll -->
 </testng-results>
