@@ -131,7 +131,7 @@ public class RepositoryPage extends BasePage {
     }
 
     public boolean alertAppears() {
-        saveDescriptionButton.click();
+        //saveDescriptionButton.click();
         if (Wait.isReady(saveDescriptionButton) && (Wait.isReady(cancelDescriptionButton))) {
             return true;
         }

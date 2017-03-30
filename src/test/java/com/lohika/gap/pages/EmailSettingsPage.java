@@ -3,6 +3,7 @@ package com.lohika.gap.pages;
 import com.lohika.gap.core.BasePage;
 import com.lohika.gap.core.Wait;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,6 +36,8 @@ public class EmailSettingsPage extends BasePage {
     public void changeEmailPreferences(){
         Wait.forElement(typeMarketingRadiobutton);
         Wait.seconds(1);
+        ((JavascriptExecutor)driver).executeScript("scroll(0,400)");
+        Wait.seconds(1);
         if (typeMarketingRadiobutton.isSelected()){
             clickOnElement(typeTransactionalRadiobutton);
         }
@@ -42,6 +45,7 @@ public class EmailSettingsPage extends BasePage {
             clickOnElement(typeMarketingRadiobutton);
         }
         clickOnElement(SaveEmailPreferencesButton);
+        Wait.seconds(1);
     }
 
 }

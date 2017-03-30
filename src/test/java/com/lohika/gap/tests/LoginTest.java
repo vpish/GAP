@@ -1,34 +1,31 @@
 package com.lohika.gap.tests;
 
-import com.lohika.gap.core.Wait;
+import com.lohika.gap.TestData.IncorrectValues;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
-    @Test
+    @Test (groups = {"positive"})
     public void testSignout(){
         homePage.signout();
-        Wait.seconds(1);
-        Assert.assertEquals(driver.getTitle(),"How people build software · GitHub","User is not signed out");
-    }
-
-    @Test (dependsOnMethods = {"testSignout"})
-    public void testSignin_IncorrectCredentials(){
         loginPage.goToLoginMode();
-        loginPage.login("qqq","qqqq");
-        Assert.assertEquals(loginPage.getErrorText(),"Incorrect username or password.");
+        Assert.assertEquals(driver.getTitle(),"Sign in to GitHub · GitHub","User is not signed out");
     }
 
-    @Test (dependsOnMethods = {"testSignin_IncorrectCredentials"})
-    public void testSignin(){
-        loginPage.login(USER_NAME,USER_PASS);
-        Wait.seconds(1);
+    @Test (groups = {"negative"}, dependsOnMethods = {"testSignout"}, dataProvider = "IncorrectCredentials", dataProviderClass = IncorrectValues.class )
+    public void testSignin_IncorrectCredentials(String userName, String password, String errorText){
+        loginPage.login(userName,password);
+        Assert.assertEquals(loginPage.getErrorText(),errorText);
+    }
+
+    @Parameters({ "userName", "userPassword" })
+    @Test (groups = {"positive"}, dependsOnMethods = {"testSignin_IncorrectCredentials"})
+    public void testSignin(String user_name, String user_password){
+        loginPage.login(user_name, user_password);
         Assert.assertEquals(driver.getTitle(),"GitHub","User is not signed in");
     }
-
-
-
 
 }
 

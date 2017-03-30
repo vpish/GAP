@@ -3,10 +3,11 @@ package com.lohika.gap.tests;
 import com.lohika.gap.core.DriverFactory;
 import com.lohika.gap.pages.*;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
-import static com.lohika.gap.core.DriverFactory.BrowserType.CHROME;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 /**
  * Created by vova on 10.01.2017.
@@ -14,13 +15,7 @@ import static com.lohika.gap.core.DriverFactory.BrowserType.CHROME;
 public class BaseTest {
 
     protected WebDriver driver;
-    DriverFactory.BrowserType type = CHROME;
-    //DriverFactory.BrowserType type = FIREFOX;
-
     protected final String SITE_URL = "https://github.com/login";
-    protected final String USER_NAME = "vvpp03";
-    protected final String USER_PASS = "12qwaszx";
-
     protected LoginPage loginPage;
     protected HomePage homePage;
     protected NewRepositoryPage newRepositoryPage;
@@ -31,16 +26,21 @@ public class BaseTest {
     protected AccountPage accountPage;
     protected EmailSettingsPage emailSettingsPage;
 
-
+    @Parameters({ "userName", "userPassword","browser" })
     @BeforeClass(alwaysRun = true)
-    public void SetupMethod(){
-
+    public void SetupMethod(@Optional("vvpp03") String user_name,
+                            @Optional("12qwaszx") String user_password,
+                            @Optional("CHROME") DriverFactory.BrowserType browser){
+        // ------- initialize WebDriver
+        DriverFactory.BrowserType type = browser;
         driver = DriverFactory.getDriver(type);
-
+        System.out.println("browser = "+ browser);
+        // ------- login to system
         driver.get(SITE_URL);
         loginPage = new LoginPage(driver);
-        loginPage.login(USER_NAME, USER_PASS);
-
+        loginPage.login(user_name, user_password);
+        Assert.assertEquals(driver.getTitle(),"GitHub","User is not signed in");
+        //------ pages
         homePage = new HomePage(driver);
         newRepositoryPage = new NewRepositoryPage(driver);
         repositoryPage =  new RepositoryPage(driver);

@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="190.958" tests="28" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="413.228" tests="30" errors="0" skipped="4" failures="7">
   <properties>
-    <property name="idea.version" value="2016.1.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\bin"/>
     <property name="java.vm.version" value="25.73-b02"/>
     <property name="user.country.format" value="UA"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Dev\GAP"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7535"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
@@ -28,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2016.1.1\plugins\maven\lib\maven3\bin\m2.conf"/>
+    <property name="classworlds.conf" value="C:\Program Files (x86)\apache-maven-3.3.9\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_73\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Python27;C:\Program Files\Java\jdk1.8.0_73\bin\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Common Files\Adobe\AGL;C:\Program Files (x86)\apache-maven-3.3.9\bin;C:\Program Files (x86)\Skype\Phone\;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -39,14 +38,13 @@
     <property name="user.timezone" value="Europe/Helsinki"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
-    <property name="idea.launcher.bin.path" value="C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2016.1.1\bin"/>
-    <property name="file.encoding" value="UTF-8"/>
+    <property name="file.encoding" value="Cp1251"/>
     <property name="user.name" value="vova"/>
-    <property name="java.class.path" value="C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2016.1.1\plugins\maven\lib\maven3\boot\plexus-classworlds-2.4.jar;C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2016.1.1\lib\idea_rt.jar"/>
+    <property name="java.class.path" value="C:\Program Files (x86)\apache-maven-3.3.9\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_73\jre"/>
-    <property name="sun.java.command" value="com.intellij.rt.execution.application.AppMain org.codehaus.classworlds.Launcher -Didea.version=2016.1.1 clean test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="user.language.format" value="uk"/>
@@ -55,41 +53,168 @@
     <property name="java.version" value="1.8.0_73"/>
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_73\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_73\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_73\jre\classes"/>
+    <property name="sun.stderr.encoding" value="cp866"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2016.1.1\plugins\maven\lib\maven3"/>
+    <property name="maven.home" value="C:\Program Files (x86)\apache-maven-3.3.9\bin\.."/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.stdout.encoding" value="cp866"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testCreateNewRepository" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="5.282"/>
-  <testcase name="testCreateNewRepository_AlreadyExist" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="5.385"/>
-  <testcase name="testCreateNewRepository_NoName" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="4.405"/>
-  <testcase name="testRenameRepository" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="8.217"/>
-  <testcase name="testRenameRepository_NameAlreadyExist" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="3.915"/>
-  <testcase name="testRemoveRepository" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="5.729"/>
-  <testcase name="testRemoveCurrentDescription" classname="com.lohika.gap.tests.RepositoryDescriptionTest" time="4.425"/>
-  <testcase name="testSetNewDescription" classname="com.lohika.gap.tests.RepositoryDescriptionTest" time="3.465"/>
-  <testcase name="testSetNewDescription_Canceled" classname="com.lohika.gap.tests.RepositoryDescriptionTest" time="2.148"/>
-  <testcase name="testSetNewDescription_IncorectWebpage" classname="com.lohika.gap.tests.RepositoryDescriptionTest" time="2.229"/>
-  <testcase name="testAddNewFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="6.85"/>
-  <testcase name="testAddNewFile_AlreadyExists" classname="com.lohika.gap.tests.RepositoryFilesTest" time="6.843"/>
-  <testcase name="testAddNewFile_Canceled" classname="com.lohika.gap.tests.RepositoryFilesTest" time="9.969"/>
-  <testcase name="testEditFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="8.086"/>
-  <testcase name="testUploadFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="8.571"/>
-  <testcase name="testUploadFileViaAUTOIT" classname="com.lohika.gap.tests.RepositoryFilesTest" time="8.057"/>
-  <testcase name="testUploadFile_Failed" classname="com.lohika.gap.tests.RepositoryFilesTest" time="3.471"/>
-  <testcase name="testRemoveFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="6.045"/>
-  <testcase name="testAddNewEmail" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.398"/>
-  <testcase name="testAddNewEmail_AlreadyExist" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.405"/>
-  <testcase name="testChangeEmailPreferences" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.819"/>
-  <testcase name="testChangePassword_WrongNewPassword" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.392"/>
-  <testcase name="testChangePassword_WrongOldPassword" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.007"/>
-  <testcase name="testChangeUserProfile" classname="com.lohika.gap.tests.ChangeSettingsTest" time="6.498"/>
-  <testcase name="testRemoveEmail" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.427"/>
-  <testcase name="testSignout" classname="com.lohika.gap.tests.LoginTest" time="2.411"/>
-  <testcase name="testSignin_IncorrectCredentials" classname="com.lohika.gap.tests.LoginTest" time="2.391"/>
-  <testcase name="testSignin" classname="com.lohika.gap.tests.LoginTest" time="2.532"/>
+  <testcase name="testCreateNewRepository" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="63.149">
+    <failure message="chrome not reachable&#10;  (Session info: chrome=56.0.2924.87)&#10;  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 4.02 seconds&#10;Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;&#10;System info: host: &apos;vova-pc&apos;, ip: &apos;172.22.90.81&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_73&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\vova\AppData\Local\Temp\scoped_dir5836_1275}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]&#10;Session ID: 67a7615041e6dc6bb277cb4e66c3b8fd&#10;*** Element info: {Using=xpath, value=//button[@data-disable-with=&apos;Creating repositoryвЂ¦&apos;]}" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+chrome not reachable
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.02 seconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'vova-pc', ip: '172.22.90.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\vova\AppData\Local\Temp\scoped_dir5836_1275}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 67a7615041e6dc6bb277cb4e66c3b8fd
+*** Element info: {Using=xpath, value=//button[@data-disable-with='Creating repositoryвЂ¦']}
+	at com.lohika.gap.tests.ManageRepositoriesTest.testCreateNewRepository(ManageRepositoriesTest.java:11)
+</failure>
+    <system-out><![CDATA[Wait 1 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 2 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 3 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 4 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 5 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 6 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 7 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 8 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 9 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9) on port 21107
+Only local connections are allowed.
+бер. 28, 2017 6:00:34 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+бер. 28, 2017 6:00:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+]]></system-err>
+  </testcase>
+  <testcase name="testRenameRepository" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="4.044">
+    <failure message="chrome not reachable&#10;  (Session info: chrome=56.0.2924.87)&#10;  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 4.04 seconds&#10;Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;&#10;System info: host: &apos;vova-pc&apos;, ip: &apos;172.22.90.81&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_73&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\vova\AppData\Local\Temp\scoped_dir5836_1275}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]&#10;Session ID: 67a7615041e6dc6bb277cb4e66c3b8fd" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+chrome not reachable
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.04 seconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'vova-pc', ip: '172.22.90.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\vova\AppData\Local\Temp\scoped_dir5836_1275}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 67a7615041e6dc6bb277cb4e66c3b8fd
+	at com.lohika.gap.tests.ManageRepositoriesTest.testRenameRepository(ManageRepositoriesTest.java:39)
+</failure>
+  </testcase>
+  <testcase name="testRemoveRepository" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="0">
+    <skipped message="Method ManageRepositoriesTest.testRemoveRepository()[pri:0, instance:com.lohika.gap.tests.ManageRepositoriesTest@3a03464] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testRemoveCurrentDescription" classname="com.lohika.gap.tests.RepositoryDescriptionTest" time="5.183"/>
+  <testcase name="testSetNewDescription" classname="com.lohika.gap.tests.RepositoryDescriptionTest" time="3.895"/>
+  <testcase name="testSetNewDescription_Canceled" classname="com.lohika.gap.tests.RepositoryDescriptionTest" time="2.275"/>
+  <testcase name="testAddNewFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="8.694"/>
+  <testcase name="testEditFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="9.456"/>
+  <testcase name="testUploadFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="13.432"/>
+  <testcase name="testUploadFileViaAUTOIT" classname="com.lohika.gap.tests.RepositoryFilesTest" time="13.933"/>
+  <testcase name="testRemoveFile" classname="com.lohika.gap.tests.RepositoryFilesTest" time="6.325"/>
+  <testcase name="testAddNewEmail" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.334"/>
+  <testcase name="testChangeEmailPreferences" classname="com.lohika.gap.tests.ChangeSettingsTest" time="6.555"/>
+  <testcase name="testChangeUserProfile" classname="com.lohika.gap.tests.ChangeSettingsTest" time="5.997">
+    <failure message="Profile wasn&apos;t updated expected [Profile updated successfully вЂ” view your profile.] but found [Profile updated successfully — view your profile.]" type="java.lang.AssertionError">java.lang.AssertionError: Profile wasn't updated expected [Profile updated successfully вЂ” view your profile.] but found [Profile updated successfully — view your profile.]
+	at com.lohika.gap.tests.ChangeSettingsTest.testChangeUserProfile(ChangeSettingsTest.java:12)
+</failure>
+  </testcase>
+  <testcase name="testRemoveEmail" classname="com.lohika.gap.tests.ChangeSettingsTest" time="5.082"/>
+  <testcase name="testSignout" classname="com.lohika.gap.tests.LoginTest" time="3.035">
+    <failure message="User is not signed out expected [The world&apos;s leading software development platform В· GitHub] but found [The world&apos;s leading software development platform · GitHub]" type="java.lang.AssertionError">java.lang.AssertionError: User is not signed out expected [The world's leading software development platform В· GitHub] but found [The world's leading software development platform · GitHub]
+	at com.lohika.gap.tests.LoginTest.testSignout(LoginTest.java:13)
+</failure>
+    <system-err><![CDATA[Starting ChromeDriver 2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9) on port 4312
+Only local connections are allowed.
+бер. 28, 2017 6:03:43 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+бер. 28, 2017 6:03:45 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+]]></system-err>
+  </testcase>
+  <testcase name="testSignout" classname="com.lohika.gap.tests.LoginTest" time="2.681">
+    <failure message="User is not signed out expected [The world&apos;s leading software development platform В· GitHub] but found [The world&apos;s leading software development platform · GitHub]" type="java.lang.AssertionError">java.lang.AssertionError: User is not signed out expected [The world's leading software development platform В· GitHub] but found [The world's leading software development platform · GitHub]
+	at com.lohika.gap.tests.LoginTest.testSignout(LoginTest.java:13)
+</failure>
+    <system-err><![CDATA[Starting ChromeDriver 2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9) on port 3557
+Only local connections are allowed.
+бер. 28, 2017 6:07:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+бер. 28, 2017 6:07:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+]]></system-err>
+  </testcase>
+  <testcase name="testSignin_IncorrectCredentials" classname="com.lohika.gap.tests.LoginTest" time="0">
+    <skipped message="Method LoginTest.testSignin_IncorrectCredentials()[pri:0, instance:com.lohika.gap.tests.LoginTest@34b7bfc0] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testSignin_IncorrectCredentials" classname="com.lohika.gap.tests.LoginTest" time="0">
+    <skipped message="Method LoginTest.testSignin_IncorrectCredentials()[pri:0, instance:com.lohika.gap.tests.LoginTest@13a57a3b] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testSignin" classname="com.lohika.gap.tests.LoginTest" time="0">
+    <skipped message="Method LoginTest.testSignin()[pri:0, instance:com.lohika.gap.tests.LoginTest@34b7bfc0] depends on not successfully finished methods"/>
+  </testcase>
+  <testcase name="testCreateNewRepository_AlreadyExist" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="59.338">
+    <failure message="Timed out after 10s. waiting for element: Proxy element for: DefaultElementLocator &apos;By.xpath: //button[@data-disable-with=&apos;Creating repositoryвЂ¦&apos;]&apos;&#10;Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;&#10;System info: host: &apos;vova-pc&apos;, ip: &apos;172.22.90.81&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_73&apos;&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: 
+Timed out after 10s. waiting for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'vova-pc', ip: '172.22.90.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
+Driver info: driver.version: unknown
+	at com.lohika.gap.tests.ManageRepositoriesTest.testCreateNewRepository_AlreadyExist(ManageRepositoriesTest.java:18)
+</failure>
+    <system-out><![CDATA[Wait 1 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 2 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 3 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 4 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 5 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 6 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 7 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 8 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 9 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 10 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9) on port 8426
+Only local connections are allowed.
+бер. 28, 2017 6:03:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+бер. 28, 2017 6:03:57 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+]]></system-err>
+  </testcase>
+  <testcase name="testCreateNewRepository_NoName" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="59.728">
+    <failure message="Timed out after 10s. waiting for element: Proxy element for: DefaultElementLocator &apos;By.xpath: //button[@data-disable-with=&apos;Creating repositoryвЂ¦&apos;]&apos;&#10;Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:49:13 -0700&apos;&#10;System info: host: &apos;vova-pc&apos;, ip: &apos;172.22.90.81&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_73&apos;&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: 
+Timed out after 10s. waiting for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'vova-pc', ip: '172.22.90.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
+Driver info: driver.version: unknown
+	at com.lohika.gap.tests.ManageRepositoriesTest.testCreateNewRepository_NoName(ManageRepositoriesTest.java:25)
+</failure>
+    <system-out><![CDATA[Wait 1 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 2 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 3 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 4 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 5 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 6 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 7 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 8 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 9 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+Wait 10 seconds for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repositoryвЂ¦']'
+]]></system-out>
+  </testcase>
+  <testcase name="testRenameRepository_NameAlreadyExist" classname="com.lohika.gap.tests.ManageRepositoriesTest" time="5.915"/>
+  <testcase name="testSetNewDescription_IncorectWebpage" classname="com.lohika.gap.tests.RepositoryDescriptionTest" time="3.265"/>
+  <testcase name="testAddNewFile_AlreadyExists" classname="com.lohika.gap.tests.RepositoryFilesTest" time="6.379"/>
+  <testcase name="testAddNewFile_Canceled" classname="com.lohika.gap.tests.RepositoryFilesTest" time="10.52"/>
+  <testcase name="testUploadFile_Failed" classname="com.lohika.gap.tests.RepositoryFilesTest" time="5.161"/>
+  <testcase name="testAddNewEmail_AlreadyExist" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.48"/>
+  <testcase name="testChangePassword_WrongNewPassword" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.537"/>
+  <testcase name="testChangePassword_WrongOldPassword" classname="com.lohika.gap.tests.ChangeSettingsTest" time="4.103"/>
 </testsuite>

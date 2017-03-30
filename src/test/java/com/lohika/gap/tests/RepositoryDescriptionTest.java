@@ -1,37 +1,28 @@
 package com.lohika.gap.tests;
 
+import com.lohika.gap.TestData.CorrectValues;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RepositoryDescriptionTest extends BaseTest {
 
-    @Test
-    public void testSetNewDescription(){
+    @Test (groups = {"positive"}, dataProvider = "RepositoryDescriptions", dataProviderClass = CorrectValues.class)
+    public void testSetNewDescription(String description, String webpage, String descriptionText){
         homePage.selectRepository("TestRepo");
-        repositoryPage.editDescription("Test test","https://www.skype.com");
+        repositoryPage.editDescription(description, webpage);
         repositoryPage.saveChanges();
-        //Wait.seconds(1);
-        Assert.assertEquals(repositoryPage.getDescriptionText(),"Test test","New Description wasn't set. ");
+        Assert.assertEquals(repositoryPage.getDescriptionText(),descriptionText,"Description wasn't changed. ");
     }
 
-    @Test
-    public void testRemoveCurrentDescription(){
-        homePage.selectRepository("TestRepo");
-        repositoryPage.editDescription("","");
-        repositoryPage.saveChanges();
-        Assert.assertEquals(repositoryPage.getDescriptionText(),"No description, website, or topics provided.","Description wasn't removed. ");
-    }
-
-    @Test
+    @Test (groups = {"negative"})
     public void testSetNewDescription_IncorectWebpage(){
         homePage.selectRepository("TestRepo");
-        String description = repositoryPage.getDescriptionText();
         repositoryPage.editDescription("abcd","abcd");
         repositoryPage.saveChanges();
         Assert.assertTrue(repositoryPage.alertAppears(),"Alert doesn't appear");
     }
 
-    @Test
+    @Test (groups = {"positive"})
     public void testSetNewDescription_Canceled(){
         homePage.selectRepository("TestRepo");
         String description = repositoryPage.getDescriptionText();

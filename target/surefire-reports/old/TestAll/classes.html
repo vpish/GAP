@@ -12,35 +12,43 @@
 <tr>
 <td>&nbsp;</td>
 <td>testAddNewFile_Canceled</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>testUploadFile</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>testEditFile</td>
-<td>&nbsp;</td></tr>
+<td>negative </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testAddNewFile_AlreadyExists</td>
-<td>&nbsp;</td></tr>
+<td>negative </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>testEditFile</td>
+<td>positive </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>testUploadFile</td>
+<td>positive </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testRemoveFile</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>testAddNewFile</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testUploadFile_Failed</td>
-<td>&nbsp;</td></tr>
+<td>negative </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>testAddNewFile</td>
+<td>positive </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testUploadFileViaAUTOIT</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
 </tr>
@@ -70,15 +78,18 @@
 <tr>
 <td>&nbsp;</td>
 <td>testSignin_IncorrectCredentials</td>
-<td>&nbsp;</td></tr>
+<td>negative </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testSignout</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testSignin</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
 </tr>
@@ -108,27 +119,33 @@
 <tr>
 <td>&nbsp;</td>
 <td>testRenameRepository_NameAlreadyExist</td>
-<td>&nbsp;</td></tr>
+<td>negative </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testCreateNewRepository_NoName</td>
-<td>&nbsp;</td></tr>
+<td>negative </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testCreateNewRepository_AlreadyExist</td>
-<td>&nbsp;</td></tr>
+<td>negative </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testCreateNewRepository</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testRenameRepository</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testRemoveRepository</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
 </tr>
@@ -158,19 +175,23 @@
 <tr>
 <td>&nbsp;</td>
 <td>testSetNewDescription_Canceled</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testSetNewDescription_IncorectWebpage</td>
-<td>&nbsp;</td></tr>
+<td>negative </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testRemoveCurrentDescription</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testSetNewDescription</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
 </tr>
@@ -200,31 +221,43 @@
 <tr>
 <td>&nbsp;</td>
 <td>testChangeUserProfile</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testChangePassword_WrongOldPassword</td>
-<td>&nbsp;</td></tr>
+<td>negative </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testChangePassword_WrongNewPassword</td>
-<td>&nbsp;</td></tr>
+<td>negative </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>testOpenGooglePage</td>
+<td>positive </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testRemoveEmail</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testAddNewEmail_AlreadyExist</td>
-<td>&nbsp;</td></tr>
+<td>negative </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testAddNewEmail</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>testChangeEmailPreferences</td>
-<td>&nbsp;</td></tr>
+<td>positive </td>
+</tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
 </tr>

@@ -25,7 +25,7 @@
         <module name="GAP" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="GAP" target="1.5" />
     </bytecodeTargetLevel>
   </component>

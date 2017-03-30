@@ -12,6 +12,7 @@ public class LoginPage extends BasePage {
     @FindBy(name = "commit") private WebElement signInButton;
     @FindBy(linkText = "Sign in") private WebElement loginButton;
     @FindBy (css = "div.flash.flash-full.flash-error") private WebElement loginErrorMessage;
+    @FindBy(css = "a.header-logo-invertocat") private WebElement homeButton;
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -24,7 +25,7 @@ public class LoginPage extends BasePage {
     }
 
     public void goToLoginMode(){
-        clickOnElement(loginButton);
+            clickOnElement(loginButton);
     }
 
     public String getErrorText(){

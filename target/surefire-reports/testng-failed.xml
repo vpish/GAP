@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [TestAll]">
+  <test name="All_positive(failed)">
+    <groups>
+      <run>
+        <include name="positive"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.lohika.gap.tests.ManageRepositoriesTest">
+        <methods>
+          <include name="testCreateNewRepository"/>
+          <include name="cleanMethod"/>
+          <include name="cleanMethod"/>
+          <include name="SetupMethod"/>
+          <include name="SetupMethod"/>
+          <include name="testRemoveRepository"/>
+          <include name="testRenameRepository"/>
+        </methods>
+      </class> <!-- com.lohika.gap.tests.ManageRepositoriesTest -->
+      <class name="com.lohika.gap.tests.LoginTest">
+        <methods>
+          <include name="testSignin_IncorrectCredentials"/>
+          <include name="cleanMethod"/>
+          <include name="cleanMethod"/>
+          <include name="SetupMethod"/>
+          <include name="SetupMethod"/>
+          <include name="testSignin"/>
+          <include name="testSignout"/>
+        </methods>
+      </class> <!-- com.lohika.gap.tests.LoginTest -->
+      <class name="com.lohika.gap.tests.RepositoryDescriptionTest">
+        <methods>
+          <include name="cleanMethod"/>
+          <include name="cleanMethod"/>
+          <include name="SetupMethod"/>
+          <include name="SetupMethod"/>
+        </methods>
+      </class> <!-- com.lohika.gap.tests.RepositoryDescriptionTest -->
+      <class name="com.lohika.gap.tests.RepositoryFilesTest">
+        <methods>
+          <include name="cleanMethod"/>
+          <include name="cleanMethod"/>
+          <include name="SetupMethod"/>
+          <include name="SetupMethod"/>
+        </methods>
+      </class> <!-- com.lohika.gap.tests.RepositoryFilesTest -->
+      <class name="com.lohika.gap.tests.ChangeSettingsTest">
+        <methods>
+          <include name="cleanMethod"/>
+          <include name="cleanMethod"/>
+          <include name="testChangeUserProfile"/>
+          <include name="SetupMethod"/>
+          <include name="SetupMethod"/>
+        </methods>
+      </class> <!-- com.lohika.gap.tests.ChangeSettingsTest -->
+    </classes>
+  </test> <!-- All_positive(failed) -->
+  <test name="All_negative(failed)">
+    <groups>
+      <run>
+        <include name="negative"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.lohika.gap.tests.ManageRepositoriesTest">
+        <methods>
+          <include name="testCreateNewRepository_NoName"/>
+          <include name="cleanMethod"/>
+          <include name="cleanMethod"/>
+          <include name="SetupMethod"/>
+          <include name="SetupMethod"/>
+          <include name="testCreateNewRepository_AlreadyExist"/>
+        </methods>
+      </class> <!-- com.lohika.gap.tests.ManageRepositoriesTest -->
+      <class name="com.lohika.gap.tests.LoginTest">
+        <methods>
+          <include name="testSignin_IncorrectCredentials"/>
+          <include name="cleanMethod"/>
+          <include name="cleanMethod"/>
+          <include name="SetupMethod"/>
+          <include name="SetupMethod"/>
+          <include name="testSignout"/>
+        </methods>
+      </class> <!-- com.lohika.gap.tests.LoginTest -->
+      <class name="com.lohika.gap.tests.RepositoryDescriptionTest">
+        <methods>
+          <include name="cleanMethod"/>
+          <include name="cleanMethod"/>
+          <include name="SetupMethod"/>
+          <include name="SetupMethod"/>
+        </methods>
+      </class> <!-- com.lohika.gap.tests.RepositoryDescriptionTest -->
+      <class name="com.lohika.gap.tests.RepositoryFilesTest">
+        <methods>
+          <include name="cleanMethod"/>
+          <include name="cleanMethod"/>
+          <include name="SetupMethod"/>
+          <include name="SetupMethod"/>
+        </methods>
+      </class> <!-- com.lohika.gap.tests.RepositoryFilesTest -->
+      <class name="com.lohika.gap.tests.ChangeSettingsTest">
+        <methods>
+          <include name="cleanMethod"/>
+          <include name="cleanMethod"/>
+          <include name="SetupMethod"/>
+          <include name="SetupMethod"/>
+        </methods>
+      </class> <!-- com.lohika.gap.tests.ChangeSettingsTest -->
+    </classes>
+  </test> <!-- All_negative(failed) -->
+</suite> <!-- Failed suite [TestAll] -->

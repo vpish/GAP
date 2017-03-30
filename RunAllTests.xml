@@ -2,14 +2,27 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="TestAll">
 
-    <test name="repositories">
+    <test name="All_tests">
+        <parameter name="userName"  value="vvpp03"/>
+        <parameter name="userPassword"  value="12qwaszx"/>
+        <parameter name="browser"  value="CHROME"/>
+        <groups>
+            <run>
+                <include name="positive"/>
+                <include name="negative"/>
+            </run>
+        </groups>
         <classes>
             <class name="com.lohika.gap.tests.ManageRepositoriesTest" />
             <class name="com.lohika.gap.tests.RepositoryDescriptionTest" />
             <class name="com.lohika.gap.tests.RepositoryFilesTest" />
-            <class name="com.lohika.gap.tests.ChangeSettingsTest" />
+            <class name="com.lohika.gap.tests.ChangeSettingsTest" >
+                <methods>
+                    <exclude name="testOpenGooglePage"/>
+                </methods>
+            </class>
             <class name="com.lohika.gap.tests.LoginTest" />
         </classes>
     </test>
-
+    <!--  comment -->
 </suite>

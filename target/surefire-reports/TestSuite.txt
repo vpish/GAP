@@ -1,4 +1,59 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 190.958 sec - in TestSuite
+Tests run: 30, Failures: 7, Errors: 0, Skipped: 4, Time elapsed: 413.228 sec <<< FAILURE! - in TestSuite
+testCreateNewRepository(com.lohika.gap.tests.ManageRepositoriesTest)  Time elapsed: 63.149 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+chrome not reachable
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.02 seconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'vova-pc', ip: '172.22.90.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\vova\AppData\Local\Temp\scoped_dir5836_1275}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 67a7615041e6dc6bb277cb4e66c3b8fd
+*** Element info: {Using=xpath, value=//button[@data-disable-with='Creating repository…']}
+	at com.lohika.gap.tests.ManageRepositoriesTest.testCreateNewRepository(ManageRepositoriesTest.java:11)
+
+testRenameRepository(com.lohika.gap.tests.ManageRepositoriesTest)  Time elapsed: 4.044 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+chrome not reachable
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4.04 seconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'vova-pc', ip: '172.22.90.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\vova\AppData\Local\Temp\scoped_dir5836_1275}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 67a7615041e6dc6bb277cb4e66c3b8fd
+	at com.lohika.gap.tests.ManageRepositoriesTest.testRenameRepository(ManageRepositoriesTest.java:39)
+
+testChangeUserProfile(com.lohika.gap.tests.ChangeSettingsTest)  Time elapsed: 5.997 sec  <<< FAILURE!
+java.lang.AssertionError: Profile wasn't updated expected [Profile updated successfully — view your profile.] but found [Profile updated successfully � view your profile.]
+	at com.lohika.gap.tests.ChangeSettingsTest.testChangeUserProfile(ChangeSettingsTest.java:12)
+
+testSignout(com.lohika.gap.tests.LoginTest)  Time elapsed: 3.035 sec  <<< FAILURE!
+java.lang.AssertionError: User is not signed out expected [The world's leading software development platform · GitHub] but found [The world's leading software development platform � GitHub]
+	at com.lohika.gap.tests.LoginTest.testSignout(LoginTest.java:13)
+
+testCreateNewRepository_AlreadyExist(com.lohika.gap.tests.ManageRepositoriesTest)  Time elapsed: 59.338 sec  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Timed out after 10s. waiting for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repository…']'
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'vova-pc', ip: '172.22.90.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
+Driver info: driver.version: unknown
+	at com.lohika.gap.tests.ManageRepositoriesTest.testCreateNewRepository_AlreadyExist(ManageRepositoriesTest.java:18)
+
+testCreateNewRepository_NoName(com.lohika.gap.tests.ManageRepositoriesTest)  Time elapsed: 59.728 sec  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Timed out after 10s. waiting for element: Proxy element for: DefaultElementLocator 'By.xpath: //button[@data-disable-with='Creating repository…']'
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'vova-pc', ip: '172.22.90.81', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_73'
+Driver info: driver.version: unknown
+	at com.lohika.gap.tests.ManageRepositoriesTest.testCreateNewRepository_NoName(ManageRepositoriesTest.java:25)
+
+testSignout(com.lohika.gap.tests.LoginTest)  Time elapsed: 2.681 sec  <<< FAILURE!
+java.lang.AssertionError: User is not signed out expected [The world's leading software development platform · GitHub] but found [The world's leading software development platform � GitHub]
+	at com.lohika.gap.tests.LoginTest.testSignout(LoginTest.java:13)
+

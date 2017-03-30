@@ -1,32 +1,26 @@
 package com.lohika.gap.tests;
 
+import com.lohika.gap.TestData.IncorrectValues;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class ManageRepositoriesTest extends BaseTest {
 
-    @Test
+    @Test (groups = {"positive"})
     public void testCreateNewRepository(){
         homePage.openNewRepositoryPage();
         newRepositoryPage.createNewRepository("ABC01","new test repository" );
         Assert.assertEquals(driver.getTitle(),"vvpp03/ABC01","ABC repository was not created");
     }
 
-    @Test
-    public void testCreateNewRepository_AlreadyExist(){
+    @Test (groups = {"negative"}, dataProvider = "IncorrectRepositoryName", dataProviderClass = IncorrectValues.class)
+    public void testCreateNewRepository_Failed(String repoName, String repoDecription, String errorText){
         homePage.openNewRepositoryPage();
-        newRepositoryPage.createNewRepository("ABC","Creating already existing repository" );
-        Assert.assertEquals(homePage.getMessageText(),"Repository creation failed.","Repository doesn't exist.");
+        newRepositoryPage.createNewRepository(repoName,repoDecription );
+        Assert.assertEquals(homePage.getMessageText(),errorText,"Text message doesn't match with expected text.");
     }
 
-    @Test
-    public void testCreateNewRepository_NoName(){
-        homePage.openNewRepositoryPage();
-        newRepositoryPage.createNewRepository("","Repository without name" );
-        Assert.assertEquals(homePage.getMessageText(),"Repository creation failed.");
-    }
-
-    @Test (dependsOnMethods = {"testCreateNewRepository"})
+    @Test (groups = {"positive"}, dependsOnMethods = {"testCreateNewRepository"})
     public void testRemoveRepository(){
         homePage.selectRepository("ABC01");
         repositoryPage.openRepositorySettings();
@@ -34,7 +28,8 @@ public class ManageRepositoriesTest extends BaseTest {
         Assert.assertEquals(homePage.getMessageText(),"Your repository \"vvpp03/ABC01\" was successfully deleted.", "repository was NOT removed");
     }
 
-    @Test
+    // --- renaming---
+    @Test (groups = {"positive"})
     public void testRenameRepository(){
         homePage.selectRepository("qqq");
         repositoryPage.openRepositorySettings();
@@ -44,7 +39,7 @@ public class ManageRepositoriesTest extends BaseTest {
         repositorySettingsPage.renameCurrentRepository("qqq");
     }
 
-    @Test
+    @Test (groups = {"negative"})
     public void testRenameRepository_NameAlreadyExist(){
         homePage.selectRepository("qqq");
         repositoryPage.openRepositorySettings();
