@@ -10,7 +10,7 @@ public class ManageRepositoriesTest extends BaseTest {
     public void testCreateNewRepository(){
         homePage.openNewRepositoryPage();
         newRepositoryPage.createNewRepository("ABC01","new test repository" );
-        Assert.assertEquals(driver.getTitle(),"vvpp03/ABC01","ABC repository was not created");
+        Assert.assertEquals(repositoryPage.getRepositoryName(),"ABC01","ABC01 repository was not created");
     }
 
     @Test (groups = {"negative"}, dataProvider = "IncorrectRepositoryName", dataProviderClass = IncorrectValues.class)

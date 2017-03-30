@@ -10,7 +10,7 @@ public class NewRepositoryPage extends BasePage {
 
     @FindBy(id = "repository_name") private WebElement repositoryName;
     @FindBy(id = "repository_description") private WebElement repositoryDescription ;
-    @FindBy(xpath = "//button[@data-disable-with='Creating repository…']") private WebElement submitButton ;
+    @FindBy(css = "button.btn.btn-primary.first-in-line") private WebElement submitButton ;
 
     public NewRepositoryPage(WebDriver driver) {
        super(driver);
