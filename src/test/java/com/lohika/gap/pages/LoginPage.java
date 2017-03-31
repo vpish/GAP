@@ -1,6 +1,7 @@
 package com.lohika.gap.pages;
 
 import com.lohika.gap.core.BasePage;
+import com.lohika.gap.core.Wait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,11 +26,19 @@ public class LoginPage extends BasePage {
     }
 
     public void goToLoginMode(){
-            clickOnElement(loginButton);
+        clickOnElement(loginButton);
     }
 
     public String getErrorText(){
         return getTextFromElement(loginErrorMessage);
+    }
+
+    public Boolean isLoginPageOpened(){
+        Wait.forElement(loginInput);
+        if(loginInput.isDisplayed()){
+            return true;
+        }
+        else return false;
     }
 
 }

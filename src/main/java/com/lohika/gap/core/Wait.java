@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class Wait {
 
-    private static final int DEFAULT_TIMEOUT = 15;
+    private static final int DEFAULT_TIMEOUT = 12;
     private static final int DEFAULT_RETRY_DELAY = 1;
 
    public static void seconds(int time) {

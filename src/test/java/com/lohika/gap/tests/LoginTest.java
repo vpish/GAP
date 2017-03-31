@@ -11,7 +11,7 @@ public class LoginTest extends BaseTest {
     public void testSignout(){
         homePage.signout();
         loginPage.goToLoginMode();
-        Assert.assertEquals(driver.getTitle(),"Sign in to GitHub · GitHub","User is not signed out");
+        Assert.assertTrue(loginPage.isLoginPageOpened(),"User is not signed out");
     }
 
     @Test (groups = {"negative"}, dependsOnMethods = {"testSignout"}, dataProvider = "IncorrectCredentials", dataProviderClass = IncorrectValues.class )
@@ -24,7 +24,7 @@ public class LoginTest extends BaseTest {
     @Test (groups = {"positive"}, dependsOnMethods = {"testSignin_IncorrectCredentials"})
     public void testSignin(String user_name, String user_password){
         loginPage.login(user_name, user_password);
-        Assert.assertEquals(driver.getTitle(),"GitHub","User is not signed in");
+        Assert.assertEquals(homePage.getNameFromProfile(),user_name,"User is not signed in");
     }
 
 }

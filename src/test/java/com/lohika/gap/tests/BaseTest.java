@@ -1,6 +1,7 @@
 package com.lohika.gap.tests;
 
 import com.lohika.gap.core.DriverFactory;
+import com.lohika.gap.core.Wait;
 import com.lohika.gap.pages.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -39,9 +40,11 @@ public class BaseTest {
         driver.get(SITE_URL);
         loginPage = new LoginPage(driver);
         loginPage.login(user_name, user_password);
+        Wait.seconds(1);
         Assert.assertEquals(driver.getTitle(),"GitHub","User is not signed in");
-        //------ pages
+        //------ pages ----
         homePage = new HomePage(driver);
+        //Assert.assertEquals(homePage.getNameFromProfile(),user_name,"User is not signed in");
         newRepositoryPage = new NewRepositoryPage(driver);
         repositoryPage =  new RepositoryPage(driver);
         repositorySettingsPage = new RepositorySettingsPage(driver);
