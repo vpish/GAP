@@ -33,6 +33,7 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.6.1</version>
             <type>maven-plugin</type>
+
         </dependency>
     </dependencies>
     <build>
@@ -49,5 +50,8 @@
             </plugin>
         </plugins>
     </build>
-
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
 </project>
