@@ -27,9 +27,8 @@ public class DriverFactory {
                 //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                 break;
             default:
-                System.setProperty("webdriver.gecko.driver","D:\\Dev\\GAP\\geckodriver.exe");
-                driver = new FirefoxDriver();
-                //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                System.setProperty("webdriver.chrome.driver", "D:\\Dev\\GAP\\chromedriver.exe");
+                driver = new ChromeDriver();
                 driver.manage().window().maximize();
                 break;
         }

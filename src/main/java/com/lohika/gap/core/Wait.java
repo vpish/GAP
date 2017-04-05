@@ -36,11 +36,11 @@ public class Wait {
                 return;
             }
             time = time + DEFAULT_RETRY_DELAY;
-            seconds(time);
+            seconds(DEFAULT_RETRY_DELAY);
             System.out.println("Wait " + time + " seconds for element: " + element);
         }
         if (!isReady(element)){
-            throw new TimeoutException("Timed out after 10s. waiting for element: " + element );
+            throw new TimeoutException("Timed out after " + DEFAULT_TIMEOUT + "s. waiting for element: " + element );
         }
 
     }

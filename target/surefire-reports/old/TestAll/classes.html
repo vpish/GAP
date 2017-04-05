@@ -16,11 +16,6 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>testAddNewFile_AlreadyExists</td>
-<td>negative </td>
-</tr>
-<tr>
-<td>&nbsp;</td>
 <td>testEditFile</td>
 <td>positive </td>
 </tr>
@@ -31,18 +26,23 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
+<td>testAddNewFile_AlreadyExists</td>
+<td>negative </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
 <td>testRemoveFile</td>
+<td>positive </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>testAddNewFile</td>
 <td>positive </td>
 </tr>
 <tr>
 <td>&nbsp;</td>
 <td>testUploadFile_Failed</td>
 <td>negative </td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>testAddNewFile</td>
-<td>positive </td>
 </tr>
 <tr>
 <td>&nbsp;</td>
@@ -82,12 +82,12 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>testSignout</td>
+<td>testSignin</td>
 <td>positive </td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>testSignin</td>
+<td>testSignout</td>
 <td>positive </td>
 </tr>
 <tr>
@@ -123,12 +123,7 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>testCreateNewRepository_NoName</td>
-<td>negative </td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>testCreateNewRepository_AlreadyExist</td>
+<td>testCreateNewRepository_Failed</td>
 <td>negative </td>
 </tr>
 <tr>
@@ -174,6 +169,11 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
+<td>testSetNewDescription</td>
+<td>positive </td>
+</tr>
+<tr>
+<td>&nbsp;</td>
 <td>testSetNewDescription_Canceled</td>
 <td>positive </td>
 </tr>
@@ -181,16 +181,6 @@
 <td>&nbsp;</td>
 <td>testSetNewDescription_IncorectWebpage</td>
 <td>negative </td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>testRemoveCurrentDescription</td>
-<td>positive </td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>testSetNewDescription</td>
-<td>positive </td>
 </tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -225,12 +215,7 @@
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>testChangePassword_WrongOldPassword</td>
-<td>negative </td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>testChangePassword_WrongNewPassword</td>
+<td>testChangePassword_failed</td>
 <td>negative </td>
 </tr>
 <tr>

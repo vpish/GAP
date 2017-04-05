@@ -6,6 +6,7 @@
         <parameter name="userName"  value="vvpp03"/>
         <parameter name="userPassword"  value="12qwaszx"/>
         <parameter name="browser"  value="CHROME"/>
+        <!--  <parameter name="browser"  value="FIREFOX"/> -->
         <groups>
             <run>
                 <include name="positive"/>
@@ -24,5 +25,5 @@
             <class name="com.lohika.gap.tests.LoginTest" />
         </classes>
     </test>
-    <!--  comment -->
+
 </suite>
