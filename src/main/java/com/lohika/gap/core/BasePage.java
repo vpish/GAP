@@ -1,13 +1,11 @@
 package com.lohika.gap.core;
 
-import com.lohika.gap.core.Wait;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
 import java.util.List;
+import java.util.Optional;
 
 public class BasePage {
     protected WebDriver driver;
@@ -17,29 +15,41 @@ public class BasePage {
         this.driver = driver;
     }
 
-    public void insertTextToElement(String text, WebElement element){
+    public void insertTextToElement(String text, WebElement element) {
         Wait.forElement(element);
         element.clear();
         element.sendKeys(text);
     }
 
-    public void clickOnElement(WebElement element){
+    public void clickOnElement(WebElement element) {
         Wait.forElement(element);
         element.click();
     }
 
-    public String getTextFromElement(WebElement element){
+    public String getTextFromElement(WebElement element) {
         Wait.forElement(element);
         return element.getText();
     }
 
-    public void selectValueFromDropdown(WebElement dropdown,String value){
+    public void selectValueFromDropdown(WebElement dropdown, String value) {
         Wait.forElement(dropdown);
         Select select = new Select(dropdown);
         select.selectByValue(value);
         Wait.seconds(1);
     }
 
+    public void clickOnElementInList(String value, List<WebElement> list) {
+        Optional<WebElement> element = list.stream()
+                .filter(e -> e.getText().equals(value))
+                .findFirst();
+        if (element.isPresent()) {
+            element.get().click();
+        } else {
+            throw new RuntimeException("No element - " + value + " in list - " + list);
+        }
+    }
+
+    /* OLD METHOD:
     public void clickOnElementInList(String value, List<WebElement> list) {
         Boolean noElement = true;
         for (WebElement e : list) {
@@ -50,8 +60,8 @@ public class BasePage {
             }
         }
         if (noElement) {
-            throw new RuntimeException("2 No element - " + value + " in list - " + list);
+            throw new RuntimeException("No element - " + value + " in list - " + list);
         }
-    }
+    }*/
 
 }

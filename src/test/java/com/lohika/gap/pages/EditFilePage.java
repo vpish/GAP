@@ -9,27 +9,32 @@ import org.openqa.selenium.support.FindBy;
 
 public class EditFilePage extends BasePage {
 
-    @FindBy(css = "input.form-control.js-blob-filename.js-breadcrumb-nav") private WebElement fileNameField;
-    @FindBy(css = "div.CodeMirror-code") private WebElement editField;
-    @FindBy(id = "commit-summary-input") private WebElement commitField;
-    @FindBy(id = "submit-file") private WebElement submitButton;
-    @FindBy(css = "a.btn.btn-danger") private WebElement cancelButton;
+    @FindBy(css = "input.form-control.js-blob-filename.js-breadcrumb-nav")
+    private WebElement fileNameField;
+    @FindBy(css = "div.CodeMirror-code")
+    private WebElement editField;
+    @FindBy(id = "commit-summary-input")
+    private WebElement commitField;
+    @FindBy(id = "submit-file")
+    private WebElement submitButton;
+    @FindBy(css = "a.btn.btn-danger")
+    private WebElement cancelButton;
 
     public EditFilePage(WebDriver driver) {
         super(driver);
     }
 
-    public void editFile(String fileName, String text, String commitText ){
-        insertTextToElement(fileName,fileNameField);
-        insertTextToElement(text,editField);
-        insertTextToElement(commitText,commitField);
+    public void editFile(String fileName, String text, String commitText) {
+        insertTextToElement(fileName, fileNameField);
+        insertTextToElement(text, editField);
+        insertTextToElement(commitText, commitField);
         clickOnElement(submitButton);
     }
 
-    public void cancelCreateFile(String fileName, String text, String commitText ){
-        insertTextToElement(fileName,fileNameField);
-        insertTextToElement(text,editField);
-        insertTextToElement(commitText,commitField);
+    public void cancelCreateFile(String fileName, String text, String commitText) {
+        insertTextToElement(fileName, fileNameField);
+        insertTextToElement(text, editField);
+        insertTextToElement(commitText, commitField);
         clickOnElement(cancelButton);
         Alert alert = driver.switchTo().alert();
         Wait.seconds(1);
