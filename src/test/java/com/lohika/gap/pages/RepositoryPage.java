@@ -153,11 +153,7 @@ public class RepositoryPage extends BasePage {
     }
 
     public boolean alertAppears() {
-        if (Wait.isReady(saveDescriptionButton) && (Wait.isReady(cancelDescriptionButton))) {
-            return true;
-        } else {
-            return false;
-        }
+        return (Wait.isReady(saveDescriptionButton) && (Wait.isReady(cancelDescriptionButton)));
     }
 
     public String getDescriptionText() {
