@@ -8,25 +8,25 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
-    @Test (groups = {"positive"})
-    public void testSignout(){
+    @Test(groups = {"positive"})
+    public void testSignout() {
         homePage.signout();
         loginPage.goToLoginMode();
-        Assert.assertTrue(loginPage.isLoginPageOpened(),"User is not signed out");
+        Assert.assertTrue(loginPage.isLoginPageOpened(), "User is not signed out");
     }
 
-    @Test (groups = {"negative"}, dependsOnMethods = {"testSignout"}, dataProvider = "IncorrectCredentials", dataProviderClass = IncorrectValues.class )
-    public void testSignin_IncorrectCredentials(String userName, String password, String errorText){
-        loginPage.login(userName,password);
-        Assert.assertEquals(loginPage.getErrorText(),errorText);
+    @Test(groups = {"negative"}, dependsOnMethods = {"testSignout"}, dataProvider = "IncorrectCredentials", dataProviderClass = IncorrectValues.class)
+    public void testSignin_IncorrectCredentials(String userName, String password, String errorText) {
+        loginPage.login(userName, password);
+        Assert.assertEquals(loginPage.getErrorText(), errorText);
     }
 
-    @Parameters({ "userName", "userPassword" })
-    @Test (groups = {"positive"}, dependsOnMethods = {"testSignin_IncorrectCredentials"})
+    @Parameters({"userName", "userPassword"})
+    @Test(groups = {"positive"}, dependsOnMethods = {"testSignin_IncorrectCredentials"})
     public void testSignin(@Optional("vvpp03") String user_name,
-                           @Optional("12qwaszx") String user_password){
+                           @Optional("12qwaszx") String user_password) {
         loginPage.login(user_name, user_password);
-        Assert.assertEquals(homePage.getNameFromProfile(),user_name,"User is not signed in");
+        Assert.assertEquals(homePage.getNameFromProfile(), user_name, "User is not signed in");
     }
 
 }
